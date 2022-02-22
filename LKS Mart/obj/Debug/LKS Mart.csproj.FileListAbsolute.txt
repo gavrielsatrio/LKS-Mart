@@ -8,3 +8,4 @@ D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.GenerateRe
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.CoreCompileInputs.cache
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.exe
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.pdb
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.LoginForm.resources

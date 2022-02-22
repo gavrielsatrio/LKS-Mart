@@ -16,7 +16,7 @@ namespace LKS_Mart
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CoreForm());
+            Application.Run(new LoginForm());
         }
     }
 }
