@@ -19,7 +19,13 @@ namespace LKS_Mart
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            lblTitle.Text = this.Text;
+            btnClose.Click += btnClose_Click;
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

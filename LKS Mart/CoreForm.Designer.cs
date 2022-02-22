@@ -29,72 +29,111 @@ namespace LKS_Mart
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnFullscreen = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.timerMinimize = new System.Windows.Forms.Timer(this.components);
+            this.timerNormal = new System.Windows.Forms.Timer(this.components);
             this.panelTitleBar.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFullscreen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.White;
             this.panelTitleBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTitleBar.Controls.Add(this.btnFullscreen);
-            this.panelTitleBar.Controls.Add(this.btnMinimize);
-            this.panelTitleBar.Controls.Add(this.btnClose);
+            this.panelTitleBar.Controls.Add(this.tableLayoutPanel1);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(800, 37);
+            this.panelTitleBar.Padding = new System.Windows.Forms.Padding(8);
+            this.panelTitleBar.Size = new System.Drawing.Size(800, 40);
             this.panelTitleBar.TabIndex = 2;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            this.panelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseMove);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.btnFullscreen, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnMinimize, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 8);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 22);
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // btnFullscreen
             // 
             this.btnFullscreen.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnFullscreen.Location = new System.Drawing.Point(60, 9);
+            this.btnFullscreen.Location = new System.Drawing.Point(47, 3);
             this.btnFullscreen.Name = "btnFullscreen";
             this.btnFullscreen.Size = new System.Drawing.Size(16, 16);
             this.btnFullscreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnFullscreen.TabIndex = 2;
             this.btnFullscreen.TabStop = false;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnMinimize.Location = new System.Drawing.Point(34, 9);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(16, 16);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 1;
-            this.btnMinimize.TabStop = false;
+            this.btnFullscreen.Click += new System.EventHandler(this.btnFullscreen_Click);
             // 
             // btnClose
             // 
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnClose.Location = new System.Drawing.Point(8, 9);
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(16, 16);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
             // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnMinimize.Location = new System.Drawing.Point(25, 3);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(16, 16);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 1;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
             // lblTitle
             // 
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(8, 8);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(798, 35);
+            this.lblTitle.Size = new System.Drawing.Size(782, 22);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "label1";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitle_MouseDown);
             this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblTitle_MouseMove);
+            // 
+            // timerMinimize
+            // 
+            this.timerMinimize.Interval = 1;
+            this.timerMinimize.Tick += new System.EventHandler(this.timerMinimize_Tick);
+            // 
+            // timerNormal
+            // 
+            this.timerNormal.Interval = 1;
+            this.timerNormal.Tick += new System.EventHandler(this.timerNormal_Tick);
             // 
             // CoreForm
             // 
@@ -111,11 +150,14 @@ namespace LKS_Mart
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Core";
             this.Load += new System.EventHandler(this.CoreForm_Load);
+            this.Resize += new System.EventHandler(this.CoreForm_Resize);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFullscreen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,10 +165,13 @@ namespace LKS_Mart
         #endregion
 
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.PictureBox btnFullscreen;
-        private System.Windows.Forms.Label lblTitle;
+        protected System.Windows.Forms.Label lblTitle;
+        protected System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Timer timerMinimize;
+        private System.Windows.Forms.Timer timerNormal;
     }
 }
 
