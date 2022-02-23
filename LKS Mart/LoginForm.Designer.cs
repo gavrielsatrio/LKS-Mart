@@ -36,15 +36,15 @@ namespace LKS_Mart
             // 
             this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 37);
+            this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(800, 655);
+            this.panelContent.Size = new System.Drawing.Size(800, 560);
             this.panelContent.TabIndex = 3;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
-            this.ClientSize = new System.Drawing.Size(800, 692);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.panelContent);
             this.Name = "LoginForm";
             this.Text = "Login";

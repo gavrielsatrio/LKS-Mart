@@ -15,7 +15,11 @@ namespace LKS_Mart
     {
         private int beforeX;
         private int beforeY;
-        private string windowStatus;
+        private string windowStatus = "Normal";
+        private int currentWidth = 800;
+        private int currentHeight = 600;
+        private int currentX;
+        private int currentY;
 
         public CoreForm()
         {
@@ -84,57 +88,156 @@ namespace LKS_Mart
         {
             if(windowStatus != "Maximize")
             {
-                windowStatus = "Minimize";
+                currentWidth = this.Size.Width;
+                currentHeight = this.Size.Height;
             }
-            this.WindowState = FormWindowState.Minimized;
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(currentWidth, currentHeight);
+                this.Location = new Point(currentX, currentY);
+            }
 
-            //timerMinimize.Start();
+            timerMinimize.Start();
         }
 
         private void btnFullscreen_Click(object sender, EventArgs e)
         {
             if(windowStatus == "Maximize")
             {
-                windowStatus = "Normal";
                 this.WindowState = FormWindowState.Normal;
+                timerNormal.Start();
             }
             else
             {
-                windowStatus = "Maximize";
-                this.WindowState = FormWindowState.Maximized;
+                currentWidth = this.Size.Width;
+                currentHeight = this.Size.Height;
+                currentX = this.Location.X;
+                currentY = this.Location.Y;
+
+                timerMaximize.Start();
             }
         }
 
         private void CoreForm_Resize(object sender, EventArgs e)
         {
-            //if(windowStatus == "Minimize" && this.WindowState == FormWindowState.Minimized)
-            //{
-            //    MessageBox.Show("Test");
-            //}
+            if(windowStatus == "Minimize")
+            {
+                if(this.WindowState != FormWindowState.Minimized)
+                {
+                    // Restore after minimize (click app icon on taskbar)
+                    windowStatus = "Normal";
+                    timerNormal.Start();
+                }
+            }
+            else if(windowStatus == "MinimizeFromMaximize")
+            {
+                if (this.WindowState != FormWindowState.Minimized)
+                {
+                    // Restore after minimize (click app icon on taskbar)
+                    timerMaximize.Start();
+                }
+            }
         }
 
         private void timerMinimize_Tick(object sender, EventArgs e)
         {
-            if(this.Size.Height >= 50)
+            if(this.Size.Height >= 50 && this.Size.Width >= 100)
             {
                 int reduction = 20;
 
                 this.Size = new Size(this.Size.Width - reduction, this.Size.Height - reduction);
                 this.Location = new Point(this.Location.X + (reduction / 2), this.Location.Y + reduction);
+                
+                if(this.Opacity > 0)
+                {
+                    this.Opacity -= 0.1;
+                }
             }
             else
             {
                 timerMinimize.Stop();
+
+                
+                if(windowStatus == "Maximize")
+                {
+                    windowStatus = "MinimizeFromMaximize";
+                }
+                else
+                {
+                    windowStatus = "Minimize";
+                }
+
                 this.WindowState = FormWindowState.Minimized;
             }
         }
 
         private void timerNormal_Tick(object sender, EventArgs e)
         {
-            int addition = 8;
+            if(windowStatus == "Maximize")
+            {
+                if(this.Size.Height > currentHeight && this.Size.Width > currentWidth)
+                {
+                    int addition = 20;
 
-            this.Size = new Size(this.Size.Width + addition, this.Size.Height + addition);
-            this.Location = new Point(this.Location.X - (addition / 2), this.Location.Y - addition);
+                    this.Size = new Size(this.Size.Width - addition, this.Size.Height - addition);
+                    this.Location = new Point(this.Location.X + (addition / 2), this.Location.Y + (addition / 2));
+                }
+                else
+                {
+                    timerNormal.Stop();
+                    windowStatus = "Normal";
+                }
+            }
+            else
+            {
+                if(this.Size.Height < currentHeight && this.Size.Width < currentWidth)
+                {
+                    int addition = 20;
+
+                    this.Size = new Size(this.Size.Width + addition, this.Size.Height + addition);
+                    this.Location = new Point(this.Location.X - (addition / 2), this.Location.Y - addition);
+
+                    if (this.Opacity < 1)
+                    {
+                        this.Opacity += 0.1;
+                    }
+                }
+                else
+                {
+                    timerNormal.Stop();
+                    windowStatus = "Normal";
+                }
+            }
+        }
+
+        private void timerMaximize_Tick(object sender, EventArgs e)
+        {
+            if(this.Size.Height < this.MaximizedBounds.Height && this.Size.Width < this.MaximizedBounds.Width)
+            {
+                int addition = 20;
+
+                this.Size = new Size(this.Size.Width + addition, this.Size.Height + addition);
+                if(windowStatus == "MinimizeFromMaximize")
+                {
+                    this.Location = new Point(this.Location.X - (addition / 2), this.Location.Y - addition);
+                }
+                else
+                {
+                    this.Location = new Point(this.Location.X - (addition / 2), this.Location.Y - (addition / 2));
+                }
+
+                if (this.Opacity < 1)
+                {
+                    this.Opacity += 0.1;
+                }
+            }
+            else
+            {
+                timerMaximize.Stop();
+                windowStatus = "Maximize";
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }

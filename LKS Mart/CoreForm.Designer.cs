@@ -30,6 +30,7 @@ namespace LKS_Mart
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoreForm));
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnFullscreen = new System.Windows.Forms.PictureBox();
@@ -38,6 +39,7 @@ namespace LKS_Mart
             this.lblTitle = new System.Windows.Forms.Label();
             this.timerMinimize = new System.Windows.Forms.Timer(this.components);
             this.timerNormal = new System.Windows.Forms.Timer(this.components);
+            this.timerMaximize = new System.Windows.Forms.Timer(this.components);
             this.panelTitleBar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFullscreen)).BeginInit();
@@ -135,17 +137,23 @@ namespace LKS_Mart
             this.timerNormal.Interval = 1;
             this.timerNormal.Tick += new System.EventHandler(this.timerNormal_Tick);
             // 
+            // timerMaximize
+            // 
+            this.timerMaximize.Interval = 1;
+            this.timerMaximize.Tick += new System.EventHandler(this.timerMaximize_Tick);
+            // 
             // CoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 692);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.panelTitleBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CoreForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Core";
@@ -172,6 +180,7 @@ namespace LKS_Mart
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Timer timerMinimize;
         private System.Windows.Forms.Timer timerNormal;
+        private System.Windows.Forms.Timer timerMaximize;
     }
 }
 
