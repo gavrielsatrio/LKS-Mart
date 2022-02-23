@@ -27,5 +27,37 @@ namespace LKS_Mart
         {
             Application.Exit();
         }
+
+        private void txtPhoneEmail_Enter(object sender, EventArgs e)
+        {
+            lblPlaceholderPhoneEmail.Visible = false;
+        }
+
+        private void txtPhoneEmail_Leave(object sender, EventArgs e)
+        {
+            SetPlaceholderStateBasedOnTextBox(txtPhoneEmail, lblPlaceholderPhoneEmail);
+        }
+
+        private void txtPIN_Enter(object sender, EventArgs e)
+        {
+            lblPlaceholderPIN.Visible = false;
+        }
+
+        private void txtPIN_Leave(object sender, EventArgs e)
+        {
+            SetPlaceholderStateBasedOnTextBox(txtPIN, lblPlaceholderPIN);
+        }
+
+        private void SetPlaceholderStateBasedOnTextBox(TextBox txt, Label lbl)
+        {
+            if(txt.Text == "")
+            {
+                lbl.Visible = true;
+            }
+            else
+            {
+                lbl.Visible = false;
+            }
+        }
     }
 }
