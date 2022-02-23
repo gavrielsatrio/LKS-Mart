@@ -12,6 +12,8 @@ namespace LKS_Mart
 {
     public partial class LoginForm : CoreForm
     {
+        private LKSMartEntities db = new LKSMartEntities();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -57,6 +59,41 @@ namespace LKS_Mart
             else
             {
                 lbl.Visible = false;
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(txtPhoneEmail.Text != "")
+            {
+                if(txtPIN.Text != "")
+                {
+                    var getPIN = db.Customers.Where(x => x.email == txtPhoneEmail.Text || x.phone_number == txtPhoneEmail.Text).ToArray();
+
+                    if(getPIN.Length > 0)
+                    {
+                        if(txtPIN.Text == getPIN[0].pin_number)
+                        {
+                            MessageBox.Show("Correct data ...");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Login data invalid ...", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login data invalid ...", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill up your PIN ...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill up your email / phone number ...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

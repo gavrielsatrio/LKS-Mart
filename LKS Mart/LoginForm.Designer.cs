@@ -91,10 +91,10 @@ namespace LKS_Mart
             this.txtPIN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPIN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPIN.Location = new System.Drawing.Point(6, 7);
-            this.txtPIN.Multiline = true;
             this.txtPIN.Name = "txtPIN";
-            this.txtPIN.Size = new System.Drawing.Size(224, 17);
+            this.txtPIN.Size = new System.Drawing.Size(224, 15);
             this.txtPIN.TabIndex = 0;
+            this.txtPIN.UseSystemPasswordChar = true;
             this.txtPIN.Enter += new System.EventHandler(this.txtPIN_Enter);
             this.txtPIN.Leave += new System.EventHandler(this.txtPIN_Leave);
             // 
@@ -143,6 +143,7 @@ namespace LKS_Mart
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblHeader
             // 

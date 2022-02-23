@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LKSMartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="parent_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="last_updated_at" Type="DateTime" Precision="3" />
+    <Property Name="deleted_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Category1" Relationship="Self.FK__Category__parent__412EB0B6" FromRole="Category" ToRole="Category1" />
+    <NavigationProperty Name="Category2" Relationship="Self.FK__Category__parent__412EB0B6" FromRole="Category1" ToRole="Category" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Product__categor__44FF419A" FromRole="Category" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phone_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pin_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+    <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="point" Type="Int32" Nullable="false" />
+    <Property Name="profile_image_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="last_updated_at" Type="DateTime" Precision="3" />
+    <Property Name="deleted_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HeaderTransactions" Relationship="Self.FK__HeaderTra__custo__48CFD27E" FromRole="Customer" ToRole="HeaderTransaction" />
+    <NavigationProperty Name="PointHistories" Relationship="Self.FK__PointHist__custo__52593CB8" FromRole="Customer" ToRole="PointHistory" />
+  </EntityType>
+  <EntityType Name="DetailTransaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="header_transaction_id" Type="Int32" Nullable="false" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="last_updated_at" Type="DateTime" Precision="3" />
+    <Property Name="deleted_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HeaderTransaction" Relationship="Self.FK__DetailTra__heade__4D94879B" FromRole="DetailTransaction" ToRole="HeaderTransaction" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__DetailTra__produ__4E88ABD4" FromRole="DetailTransaction" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="HeaderTransaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="payment_type_id" Type="Int32" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sub_total" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="point_used" Type="Int32" Nullable="false" />
+    <Property Name="payment_code" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="last_updated_at" Type="DateTime" Precision="3" />
+    <Property Name="deleted_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__HeaderTra__custo__48CFD27E" FromRole="HeaderTransaction" ToRole="Customer" />
+    <NavigationProperty Name="DetailTransactions" Relationship="Self.FK__DetailTra__heade__4D94879B" FromRole="HeaderTransaction" ToRole="DetailTransaction" />
+    <NavigationProperty Name="PaymentType" Relationship="Self.FK__HeaderTra__payme__49C3F6B7" FromRole="HeaderTransaction" ToRole="PaymentType" />
+    <NavigationProperty Name="PointHistories" Relationship="Self.FK__PointHist__heade__534D60F1" FromRole="HeaderTransaction" ToRole="PointHistory" />
+  </EntityType>
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="last_updated_at" Type="DateTime" Precision="3" />
+    <Property Name="deleted_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HeaderTransactions" Relationship="Self.FK__HeaderTra__payme__49C3F6B7" FromRole="PaymentType" ToRole="HeaderTransaction" />
+  </EntityType>
+  <EntityType Name="PointHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="header_transaction_id" Type="Int32" />
+    <Property Name="point_gained" Type="Int32" />
+    <Property Name="point_deducted" Type="Int32" />
+    <Property Name="point_before" Type="Int32" Nullable="false" />
+    <Property Name="point_after" Type="Int32" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="last_updated_at" Type="DateTime" Precision="3" />
+    <Property Name="deleted_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__PointHist__custo__52593CB8" FromRole="PointHistory" ToRole="Customer" />
+    <NavigationProperty Name="HeaderTransaction" Relationship="Self.FK__PointHist__heade__534D60F1" FromRole="PointHistory" ToRole="HeaderTransaction" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="image_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="last_updated_at" Type="DateTime" Precision="3" />
+    <Property Name="deleted_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Category" Relationship="Self.FK__Product__categor__44FF419A" FromRole="Product" ToRole="Category" />
+    <NavigationProperty Name="DetailTransactions" Relationship="Self.FK__DetailTra__produ__4E88ABD4" FromRole="Product" ToRole="DetailTransaction" />
+  </EntityType>
+  <Association Name="FK__Category__parent__412EB0B6">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Category1" Type="Self.Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Category1">
+        <PropertyRef Name="parent_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product__categor__44FF419A">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HeaderTra__custo__48CFD27E">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="HeaderTransaction" Type="Self.HeaderTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HeaderTransaction">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PointHist__custo__52593CB8">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="PointHistory" Type="Self.PointHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PointHistory">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetailTra__heade__4D94879B">
+    <End Role="HeaderTransaction" Type="Self.HeaderTransaction" Multiplicity="1" />
+    <End Role="DetailTransaction" Type="Self.DetailTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HeaderTransaction">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetailTransaction">
+        <PropertyRef Name="header_transaction_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetailTra__produ__4E88ABD4">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="DetailTransaction" Type="Self.DetailTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetailTransaction">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HeaderTra__payme__49C3F6B7">
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="1" />
+    <End Role="HeaderTransaction" Type="Self.HeaderTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HeaderTransaction">
+        <PropertyRef Name="payment_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PointHist__heade__534D60F1">
+    <End Role="HeaderTransaction" Type="Self.HeaderTransaction" Multiplicity="0..1" />
+    <End Role="PointHistory" Type="Self.PointHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HeaderTransaction">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PointHistory">
+        <PropertyRef Name="header_transaction_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LKSMartEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="DetailTransactions" EntityType="Self.DetailTransaction" />
+    <EntitySet Name="HeaderTransactions" EntityType="Self.HeaderTransaction" />
+    <EntitySet Name="PaymentTypes" EntityType="Self.PaymentType" />
+    <EntitySet Name="PointHistories" EntityType="Self.PointHistory" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <AssociationSet Name="FK__Category__parent__412EB0B6" Association="Self.FK__Category__parent__412EB0B6">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Category1" EntitySet="Categories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product__categor__44FF419A" Association="Self.FK__Product__categor__44FF419A">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HeaderTra__custo__48CFD27E" Association="Self.FK__HeaderTra__custo__48CFD27E">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="HeaderTransaction" EntitySet="HeaderTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PointHist__custo__52593CB8" Association="Self.FK__PointHist__custo__52593CB8">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="PointHistory" EntitySet="PointHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetailTra__heade__4D94879B" Association="Self.FK__DetailTra__heade__4D94879B">
+      <End Role="HeaderTransaction" EntitySet="HeaderTransactions" />
+      <End Role="DetailTransaction" EntitySet="DetailTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetailTra__produ__4E88ABD4" Association="Self.FK__DetailTra__produ__4E88ABD4">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="DetailTransaction" EntitySet="DetailTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HeaderTra__payme__49C3F6B7" Association="Self.FK__HeaderTra__payme__49C3F6B7">
+      <End Role="PaymentType" EntitySet="PaymentTypes" />
+      <End Role="HeaderTransaction" EntitySet="HeaderTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PointHist__heade__534D60F1" Association="Self.FK__PointHist__heade__534D60F1">
+      <End Role="HeaderTransaction" EntitySet="HeaderTransactions" />
+      <End Role="PointHistory" EntitySet="PointHistories" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

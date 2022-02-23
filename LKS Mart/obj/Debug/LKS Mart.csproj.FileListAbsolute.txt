@@ -1,11 +1,16 @@
 D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\LKS Mart.exe.config
 D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\LKS Mart.exe
 D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\LKS Mart.pdb
-D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.AssemblyReference.cache
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\EntityFramework.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\EntityFramework.xml
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\EntityFramework.SqlServer.xml
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.CoreForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.LoginForm.resources
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.Properties.Resources.resources
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.GenerateResource.cache
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.CopyComplete
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.exe
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.pdb
-D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.LoginForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.AssemblyReference.cache

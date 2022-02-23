@@ -56,16 +56,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs">
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CoreForm.Designer.cs">
       <DependentUpon>CoreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetailTransaction.cs">
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderTransaction.cs">
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="LKSMartModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LKSMartModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LKSMartModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LKSMartModel.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -77,6 +94,15 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentType.cs">
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PointHistory.cs">
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>LKSMartModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +146,12 @@
     <Content Include="LKSMartModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>LKSMartModel.Context.cs</LastGenOutput>
+      <DependentUpon>LKSMartModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="LKSMartModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LKSMartModel.edmx</DependentUpon>
+      <LastGenOutput>LKSMartModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
