@@ -14,3 +14,4 @@ D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.CopyComple
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.exe
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.pdb
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.AssemblyReference.cache
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.MainForm.resources

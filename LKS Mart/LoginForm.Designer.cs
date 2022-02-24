@@ -79,7 +79,7 @@ namespace LKS_Mart
             // 
             this.lblPlaceholderPIN.AutoSize = true;
             this.lblPlaceholderPIN.BackColor = System.Drawing.Color.White;
-            this.lblPlaceholderPIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.lblPlaceholderPIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.lblPlaceholderPIN.Location = new System.Drawing.Point(9, 7);
             this.lblPlaceholderPIN.Name = "lblPlaceholderPIN";
             this.lblPlaceholderPIN.Size = new System.Drawing.Size(70, 15);
@@ -113,7 +113,7 @@ namespace LKS_Mart
             // 
             this.lblPlaceholderPhoneEmail.AutoSize = true;
             this.lblPlaceholderPhoneEmail.BackColor = System.Drawing.Color.White;
-            this.lblPlaceholderPhoneEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.lblPlaceholderPhoneEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.lblPlaceholderPhoneEmail.Location = new System.Drawing.Point(9, 7);
             this.lblPlaceholderPhoneEmail.Name = "lblPlaceholderPhoneEmail";
             this.lblPlaceholderPhoneEmail.Size = new System.Drawing.Size(123, 15);
@@ -135,11 +135,13 @@ namespace LKS_Mart
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(125)))), ((int)(((byte)(193)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(48, 210);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 30);
+            this.btnLogin.Size = new System.Drawing.Size(120, 35);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;

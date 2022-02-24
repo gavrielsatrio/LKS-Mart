@@ -74,7 +74,8 @@ namespace LKS_Mart
                     {
                         if(txtPIN.Text == getPIN[0].pin_number)
                         {
-                            MessageBox.Show("Correct data ...");
+                            this.Hide();
+                            new MainForm().Show();
                         }
                         else
                         {
