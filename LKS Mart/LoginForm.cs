@@ -75,7 +75,10 @@ namespace LKS_Mart
                         if(txtPIN.Text == getPIN[0].pin_number)
                         {
                             this.Hide();
-                            new MainForm().Show();
+                            new MainForm()
+                            { 
+                                customerID = getPIN[0].id
+                            }.Show();
                         }
                         else
                         {

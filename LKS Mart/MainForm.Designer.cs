@@ -82,6 +82,7 @@ namespace LKS_Mart
             // 
             // lblBtnPoint
             // 
+            this.lblBtnPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnPoint.AutoSize = true;
             this.lblBtnPoint.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnPoint.ForeColor = System.Drawing.Color.Black;
@@ -94,6 +95,7 @@ namespace LKS_Mart
             // 
             // lblBtnTransaction
             // 
+            this.lblBtnTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnTransaction.AutoSize = true;
             this.lblBtnTransaction.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnTransaction.ForeColor = System.Drawing.Color.Black;
@@ -106,6 +108,7 @@ namespace LKS_Mart
             // 
             // lblBtnShop
             // 
+            this.lblBtnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnShop.AutoSize = true;
             this.lblBtnShop.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnShop.ForeColor = System.Drawing.Color.Black;
@@ -117,6 +120,7 @@ namespace LKS_Mart
             // 
             // lblBtnProfile
             // 
+            this.lblBtnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnProfile.AutoSize = true;
             this.lblBtnProfile.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnProfile.ForeColor = System.Drawing.Color.Black;
@@ -128,6 +132,7 @@ namespace LKS_Mart
             // 
             // picBoxBtnPoint
             // 
+            this.picBoxBtnPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBoxBtnPoint.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnPoint.Image")));
             this.picBoxBtnPoint.Location = new System.Drawing.Point(94, 345);
             this.picBoxBtnPoint.Name = "picBoxBtnPoint";
@@ -138,6 +143,7 @@ namespace LKS_Mart
             // 
             // picBoxBtnTransaction
             // 
+            this.picBoxBtnTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBoxBtnTransaction.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnTransaction.Image")));
             this.picBoxBtnTransaction.Location = new System.Drawing.Point(578, 153);
             this.picBoxBtnTransaction.Name = "picBoxBtnTransaction";
@@ -148,6 +154,7 @@ namespace LKS_Mart
             // 
             // picBoxBtnShop
             // 
+            this.picBoxBtnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBoxBtnShop.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnShop.Image")));
             this.picBoxBtnShop.Location = new System.Drawing.Point(344, 153);
             this.picBoxBtnShop.Name = "picBoxBtnShop";
@@ -158,6 +165,7 @@ namespace LKS_Mart
             // 
             // picBoxBtnProfile
             // 
+            this.picBoxBtnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBoxBtnProfile.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnProfile.Image")));
             this.picBoxBtnProfile.Location = new System.Drawing.Point(94, 153);
             this.picBoxBtnProfile.Name = "picBoxBtnProfile";
@@ -180,6 +188,7 @@ namespace LKS_Mart
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblDatetime
             // 
@@ -219,6 +228,7 @@ namespace LKS_Mart
             this.picBoxProfile.Location = new System.Drawing.Point(20, 20);
             this.picBoxProfile.Name = "picBoxProfile";
             this.picBoxProfile.Size = new System.Drawing.Size(70, 70);
+            this.picBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxProfile.TabIndex = 0;
             this.picBoxProfile.TabStop = false;
             // 

@@ -14,6 +14,7 @@ namespace LKS_Mart
     public partial class MainForm : CoreForm
     {
         public int customerID = -1;
+        private LKSMartEntities db = new LKSMartEntities();
 
         public MainForm()
         {
@@ -27,6 +28,18 @@ namespace LKS_Mart
 
             lblDatetime.Text = DateTime.Now.ToString("dd MMMM yyyy, HH:mm:ss");
             timerDatetime.Start();
+
+            var customer = db.Customers.Where(x => x.id == customerID).ToArray()[0];
+            lblWelcome.Text = $"Welcome, { customer.name }!";
+
+            if(customer.profile_image_name == "" || customer.profile_image_name == null)
+            {
+                picBoxProfile.Image = Image.FromFile(Application.StartupPath + "/images/profile_pictures/default_profile_picture.png");
+            }
+            else
+            {
+                picBoxProfile.Image = Image.FromFile(Application.StartupPath + "/images/profile_pictures/" + customer.profile_image_name + ".png");
+            }
 
             //DrawOrnament();
         }
@@ -55,6 +68,12 @@ namespace LKS_Mart
         private void timerDatetime_Tick(object sender, EventArgs e)
         {
             lblDatetime.Text = DateTime.Now.ToString("dd MMMM yyyy, HH:mm:ss");
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new LoginForm().Show();
         }
     }
 }
