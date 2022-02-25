@@ -75,5 +75,50 @@ namespace LKS_Mart
             this.Hide();
             new LoginForm().Show();
         }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            // Navigate to the cart form
+        }
+
+        private void picBoxBtnProfile_Click(object sender, EventArgs e)
+        {
+            // Navigate to profile form
+        }
+
+        private void lblBtnProfile_Click(object sender, EventArgs e)
+        {
+            picBoxBtnProfile_Click(sender, e);
+        }
+
+        private void picBoxBtnShop_Click(object sender, EventArgs e)
+        {
+            // Navigate to shop form
+        }
+
+        private void lblBtnShop_Click(object sender, EventArgs e)
+        {
+            picBoxBtnShop_Click(sender, e);
+        }
+
+        private void picBoxBtnTransaction_Click(object sender, EventArgs e)
+        {
+            // Navigate to transaction history form
+        }
+
+        private void lblBtnTransaction_Click(object sender, EventArgs e)
+        {
+            picBoxBtnTransaction_Click(sender, e);
+        }
+
+        private void picBoxBtnPoint_Click(object sender, EventArgs e)
+        {
+            // Navigate to transaction point history form
+        }
+
+        private void lblBtnPoint_Click(object sender, EventArgs e)
+        {
+            picBoxBtnPoint_Click(sender, e);
+        }
     }
 }

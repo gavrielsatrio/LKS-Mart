@@ -92,6 +92,7 @@ namespace LKS_Mart
             this.lblBtnPoint.TabIndex = 10;
             this.lblBtnPoint.Text = "Point\r\nHistory";
             this.lblBtnPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBtnPoint.Click += new System.EventHandler(this.lblBtnPoint_Click);
             // 
             // lblBtnTransaction
             // 
@@ -105,6 +106,7 @@ namespace LKS_Mart
             this.lblBtnTransaction.TabIndex = 10;
             this.lblBtnTransaction.Text = "Transaction\r\nHistory";
             this.lblBtnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBtnTransaction.Click += new System.EventHandler(this.lblBtnTransaction_Click);
             // 
             // lblBtnShop
             // 
@@ -117,6 +119,7 @@ namespace LKS_Mart
             this.lblBtnShop.Size = new System.Drawing.Size(49, 22);
             this.lblBtnShop.TabIndex = 10;
             this.lblBtnShop.Text = "Shop";
+            this.lblBtnShop.Click += new System.EventHandler(this.lblBtnShop_Click);
             // 
             // lblBtnProfile
             // 
@@ -129,6 +132,7 @@ namespace LKS_Mart
             this.lblBtnProfile.Size = new System.Drawing.Size(60, 22);
             this.lblBtnProfile.TabIndex = 10;
             this.lblBtnProfile.Text = "Profile";
+            this.lblBtnProfile.Click += new System.EventHandler(this.lblBtnProfile_Click);
             // 
             // picBoxBtnPoint
             // 
@@ -140,6 +144,7 @@ namespace LKS_Mart
             this.picBoxBtnPoint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxBtnPoint.TabIndex = 9;
             this.picBoxBtnPoint.TabStop = false;
+            this.picBoxBtnPoint.Click += new System.EventHandler(this.picBoxBtnPoint_Click);
             // 
             // picBoxBtnTransaction
             // 
@@ -151,6 +156,7 @@ namespace LKS_Mart
             this.picBoxBtnTransaction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxBtnTransaction.TabIndex = 9;
             this.picBoxBtnTransaction.TabStop = false;
+            this.picBoxBtnTransaction.Click += new System.EventHandler(this.picBoxBtnTransaction_Click);
             // 
             // picBoxBtnShop
             // 
@@ -162,6 +168,7 @@ namespace LKS_Mart
             this.picBoxBtnShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxBtnShop.TabIndex = 9;
             this.picBoxBtnShop.TabStop = false;
+            this.picBoxBtnShop.Click += new System.EventHandler(this.picBoxBtnShop_Click);
             // 
             // picBoxBtnProfile
             // 
@@ -173,6 +180,7 @@ namespace LKS_Mart
             this.picBoxBtnProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxBtnProfile.TabIndex = 9;
             this.picBoxBtnProfile.TabStop = false;
+            this.picBoxBtnProfile.Click += new System.EventHandler(this.picBoxBtnProfile_Click);
             // 
             // btnLogout
             // 
@@ -222,6 +230,7 @@ namespace LKS_Mart
             this.btnCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCart.TabIndex = 0;
             this.btnCart.TabStop = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // picBoxProfile
             // 
