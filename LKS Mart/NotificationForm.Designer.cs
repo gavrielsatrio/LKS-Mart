@@ -45,7 +45,7 @@ namespace LKS_Mart
             // 
             // lblTitle
             // 
-            this.lblTitle.Size = new System.Drawing.Size(482, 22);
+            this.lblTitle.Size = new System.Drawing.Size(432, 22);
             // 
             // panelContent
             // 
@@ -56,7 +56,7 @@ namespace LKS_Mart
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(500, 380);
+            this.panelContent.Size = new System.Drawing.Size(450, 380);
             this.panelContent.TabIndex = 8;
             // 
             // lblNotification
@@ -72,12 +72,14 @@ namespace LKS_Mart
             // 
             // panelNotif
             // 
+            this.panelNotif.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelNotif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNotif.Controls.Add(this.panelNotifTop);
             this.panelNotif.Controls.Add(this.panelNotifBottom);
             this.panelNotif.Location = new System.Drawing.Point(32, 68);
             this.panelNotif.Name = "panelNotif";
-            this.panelNotif.Size = new System.Drawing.Size(436, 220);
+            this.panelNotif.Size = new System.Drawing.Size(386, 220);
             this.panelNotif.TabIndex = 9;
             // 
             // panelNotifBottom
@@ -86,7 +88,7 @@ namespace LKS_Mart
             this.panelNotifBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelNotifBottom.Location = new System.Drawing.Point(0, 148);
             this.panelNotifBottom.Name = "panelNotifBottom";
-            this.panelNotifBottom.Size = new System.Drawing.Size(434, 70);
+            this.panelNotifBottom.Size = new System.Drawing.Size(384, 70);
             this.panelNotifBottom.TabIndex = 0;
             // 
             // lblPaymentCode
@@ -95,7 +97,7 @@ namespace LKS_Mart
             this.lblPaymentCode.Font = new System.Drawing.Font("Open Sans SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentCode.Location = new System.Drawing.Point(0, 0);
             this.lblPaymentCode.Name = "lblPaymentCode";
-            this.lblPaymentCode.Size = new System.Drawing.Size(434, 70);
+            this.lblPaymentCode.Size = new System.Drawing.Size(384, 70);
             this.lblPaymentCode.TabIndex = 12;
             this.lblPaymentCode.Text = "<< Payment Code >>";
             this.lblPaymentCode.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -106,7 +108,7 @@ namespace LKS_Mart
             this.panelNotifTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNotifTop.Location = new System.Drawing.Point(0, 0);
             this.panelNotifTop.Name = "panelNotifTop";
-            this.panelNotifTop.Size = new System.Drawing.Size(434, 148);
+            this.panelNotifTop.Size = new System.Drawing.Size(384, 148);
             this.panelNotifTop.TabIndex = 1;
             // 
             // lblNotifTop
@@ -116,7 +118,7 @@ namespace LKS_Mart
             this.lblNotifTop.Location = new System.Drawing.Point(0, 0);
             this.lblNotifTop.Name = "lblNotifTop";
             this.lblNotifTop.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.lblNotifTop.Size = new System.Drawing.Size(434, 148);
+            this.lblNotifTop.Size = new System.Drawing.Size(384, 148);
             this.lblNotifTop.TabIndex = 13;
             this.lblNotifTop.Text = "Your order has been submitted successfully.\r\nPlease continue the payment process " +
     "in your\r\n<<payment type>> application.\r\n\r\nPlease input this code for the payment" +
@@ -131,10 +133,10 @@ namespace LKS_Mart
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(204, 322);
+            this.btnOK.Location = new System.Drawing.Point(179, 319);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(90, 30);
-            this.btnOK.TabIndex = 18;
+            this.btnOK.TabIndex = 20;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             // 
@@ -142,10 +144,10 @@ namespace LKS_Mart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 420);
+            this.ClientSize = new System.Drawing.Size(450, 420);
             this.Controls.Add(this.panelContent);
             this.Name = "NotificationForm";
-            this.Text = "NotificationForm";
+            this.Text = "LKS Mart";
             this.Load += new System.EventHandler(this.NotificationForm_Load);
             this.Controls.SetChildIndex(this.panelContent, 0);
             this.panelContent.ResumeLayout(false);
