@@ -30,11 +30,11 @@ namespace LKS_Mart
         private void InitializeComponent()
         {
             this.tableLayoutShopItem = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddToCart = new System.Windows.Forms.Button();
+            this.lblStock = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblStock = new System.Windows.Forms.Label();
-            this.btnAddToCart = new System.Windows.Forms.Button();
             this.tableLayoutShopItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,46 +60,6 @@ namespace LKS_Mart
             this.tableLayoutShopItem.Size = new System.Drawing.Size(468, 73);
             this.tableLayoutShopItem.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblName
-            // 
-            this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblName.Location = new System.Drawing.Point(76, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(122, 73);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "<< Product Name >>";
-            this.lblName.UseCompatibleTextRendering = true;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPrice.Location = new System.Drawing.Point(204, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(86, 73);
-            this.lblPrice.TabIndex = 2;
-            this.lblPrice.Text = "<< Product Price >>";
-            this.lblPrice.UseCompatibleTextRendering = true;
-            // 
-            // lblStock
-            // 
-            this.lblStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStock.Location = new System.Drawing.Point(296, 0);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(67, 73);
-            this.lblStock.TabIndex = 3;
-            this.lblStock.Text = "<< Product Stock >>";
-            this.lblStock.UseCompatibleTextRendering = true;
-            // 
             // btnAddToCart
             // 
             this.btnAddToCart.BackColor = System.Drawing.Color.Black;
@@ -113,6 +73,49 @@ namespace LKS_Mart
             this.btnAddToCart.TabIndex = 9;
             this.btnAddToCart.Text = "Add to Cart";
             this.btnAddToCart.UseVisualStyleBackColor = false;
+            // 
+            // lblStock
+            // 
+            this.lblStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStock.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStock.Location = new System.Drawing.Point(296, 0);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(67, 73);
+            this.lblStock.TabIndex = 3;
+            this.lblStock.Text = "<< Product Stock >>";
+            this.lblStock.UseCompatibleTextRendering = true;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPrice.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(204, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(86, 73);
+            this.lblPrice.TabIndex = 2;
+            this.lblPrice.Text = "<< Product Price >>";
+            this.lblPrice.UseCompatibleTextRendering = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblName
+            // 
+            this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblName.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(76, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(122, 73);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "<< Product Name >>";
+            this.lblName.UseCompatibleTextRendering = true;
             // 
             // ShopItemLayout
             // 
