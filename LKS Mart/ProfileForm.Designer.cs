@@ -57,7 +57,7 @@ namespace LKS_Mart
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblProfile = new System.Windows.Forms.Label();
             this.panelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditGender)).BeginInit();
@@ -96,7 +96,7 @@ namespace LKS_Mart
             this.panelContent.Controls.Add(this.btnUpload);
             this.panelContent.Controls.Add(this.btnBack);
             this.panelContent.Controls.Add(this.lblName);
-            this.panelContent.Controls.Add(this.lblWelcome);
+            this.panelContent.Controls.Add(this.lblProfile);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
@@ -349,16 +349,16 @@ namespace LKS_Mart
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Name";
             // 
-            // lblWelcome
+            // lblProfile
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
-            this.lblWelcome.Location = new System.Drawing.Point(25, 23);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(97, 33);
-            this.lblWelcome.TabIndex = 5;
-            this.lblWelcome.Text = "Profile";
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.ForeColor = System.Drawing.Color.Black;
+            this.lblProfile.Location = new System.Drawing.Point(25, 23);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(97, 33);
+            this.lblProfile.TabIndex = 5;
+            this.lblProfile.Text = "Profile";
             // 
             // ProfileForm
             // 
@@ -386,7 +386,7 @@ namespace LKS_Mart
 
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.PictureBox btnEditName;
