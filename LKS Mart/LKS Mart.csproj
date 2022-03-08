@@ -62,6 +62,18 @@
     <Compile Include="AddToCartForm.Designer.cs">
       <DependentUpon>AddToCartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CartItem.Designer.cs">
+      <DependentUpon>CartItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>LKSMartModel.tt</DependentUpon>
     </Compile>
@@ -107,6 +119,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentType.cs">
       <DependentUpon>LKSMartModel.tt</DependentUpon>
     </Compile>
@@ -136,8 +154,26 @@
     <Compile Include="ShopItemLayout.Designer.cs">
       <DependentUpon>ShopItemLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransactionHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionHistoryForm.Designer.cs">
+      <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionHistoryItemLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionHistoryItemLayout.Designer.cs">
+      <DependentUpon>TransactionHistoryItemLayout.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddToCartForm.resx">
       <DependentUpon>AddToCartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartItem.resx">
+      <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CoreForm.resx">
       <DependentUpon>CoreForm.cs</DependentUpon>
@@ -147,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
@@ -165,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShopItemLayout.resx">
       <DependentUpon>ShopItemLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionHistoryForm.resx">
+      <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionHistoryItemLayout.resx">
+      <DependentUpon>TransactionHistoryItemLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="LKSMartModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
