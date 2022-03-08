@@ -12,6 +12,8 @@ namespace LKS_Mart
 {
     public partial class CartForm : CoreForm
     {
+        private LKSMartEntities db = new LKSMartEntities();
+
         public CartForm()
         {
             InitializeComponent();
@@ -19,7 +21,20 @@ namespace LKS_Mart
 
         private void CartForm_Load(object sender, EventArgs e)
         {
+            lblTitle.Text = this.Text;
+            btnClose.Click += btnClose_Click;
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new MainForm().Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new MainForm().Show();
         }
     }
 }

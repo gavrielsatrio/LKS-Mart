@@ -79,11 +79,15 @@ namespace LKS_Mart
         private void btnCart_Click(object sender, EventArgs e)
         {
             // Navigate to the cart form
+            this.Hide();
+            new CartForm().Show();
         }
 
         private void picBoxBtnProfile_Click(object sender, EventArgs e)
         {
             // Navigate to profile form
+            this.Hide();
+            new ProfileForm().Show();
         }
 
         private void lblBtnProfile_Click(object sender, EventArgs e)
@@ -94,6 +98,8 @@ namespace LKS_Mart
         private void picBoxBtnShop_Click(object sender, EventArgs e)
         {
             // Navigate to shop form
+            this.Hide();
+            new ShopForm().Show();
         }
 
         private void lblBtnShop_Click(object sender, EventArgs e)
@@ -104,6 +110,8 @@ namespace LKS_Mart
         private void picBoxBtnTransaction_Click(object sender, EventArgs e)
         {
             // Navigate to transaction history form
+            this.Hide();
+            new TransactionHistoryForm().Show();
         }
 
         private void lblBtnTransaction_Click(object sender, EventArgs e)
@@ -114,6 +122,8 @@ namespace LKS_Mart
         private void picBoxBtnPoint_Click(object sender, EventArgs e)
         {
             // Navigate to transaction point history form
+            this.Hide();
+            new PointHistoryForm().Show();
         }
 
         private void lblBtnPoint_Click(object sender, EventArgs e)

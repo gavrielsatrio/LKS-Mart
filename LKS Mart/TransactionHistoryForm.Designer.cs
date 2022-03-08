@@ -30,12 +30,12 @@ namespace LKS_Mart
         private void InitializeComponent()
         {
             this.panelContent = new System.Windows.Forms.Panel();
-            this.lblTransactionHistory = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.lblTransaction = new System.Windows.Forms.Label();
-            this.dgvTransaction = new System.Windows.Forms.DataGridView();
-            this.lblProductsBought = new System.Windows.Forms.Label();
             this.panelTransactionDetail = new System.Windows.Forms.Panel();
+            this.lblProductsBought = new System.Windows.Forms.Label();
+            this.dgvTransaction = new System.Windows.Forms.DataGridView();
+            this.lblTransaction = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblTransactionHistory = new System.Windows.Forms.Label();
             this.panelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.SuspendLayout();
@@ -59,16 +59,38 @@ namespace LKS_Mart
             this.panelContent.Size = new System.Drawing.Size(700, 540);
             this.panelContent.TabIndex = 3;
             // 
-            // lblTransactionHistory
+            // panelTransactionDetail
             // 
-            this.lblTransactionHistory.AutoSize = true;
-            this.lblTransactionHistory.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionHistory.ForeColor = System.Drawing.Color.Black;
-            this.lblTransactionHistory.Location = new System.Drawing.Point(26, 24);
-            this.lblTransactionHistory.Name = "lblTransactionHistory";
-            this.lblTransactionHistory.Size = new System.Drawing.Size(259, 33);
-            this.lblTransactionHistory.TabIndex = 9;
-            this.lblTransactionHistory.Text = "Transaction History";
+            this.panelTransactionDetail.Location = new System.Drawing.Point(32, 314);
+            this.panelTransactionDetail.Name = "panelTransactionDetail";
+            this.panelTransactionDetail.Size = new System.Drawing.Size(633, 180);
+            this.panelTransactionDetail.TabIndex = 15;
+            // 
+            // lblProductsBought
+            // 
+            this.lblProductsBought.AutoSize = true;
+            this.lblProductsBought.Location = new System.Drawing.Point(29, 296);
+            this.lblProductsBought.Name = "lblProductsBought";
+            this.lblProductsBought.Size = new System.Drawing.Size(238, 15);
+            this.lblProductsBought.TabIndex = 14;
+            this.lblProductsBought.Text = "Products bought for the selected transaction";
+            // 
+            // dgvTransaction
+            // 
+            this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransaction.Location = new System.Drawing.Point(32, 97);
+            this.dgvTransaction.Name = "dgvTransaction";
+            this.dgvTransaction.Size = new System.Drawing.Size(633, 180);
+            this.dgvTransaction.TabIndex = 13;
+            // 
+            // lblTransaction
+            // 
+            this.lblTransaction.AutoSize = true;
+            this.lblTransaction.Location = new System.Drawing.Point(29, 79);
+            this.lblTransaction.Name = "lblTransaction";
+            this.lblTransaction.Size = new System.Drawing.Size(67, 15);
+            this.lblTransaction.TabIndex = 12;
+            this.lblTransaction.Text = "Transaction";
             // 
             // btnBack
             // 
@@ -84,39 +106,18 @@ namespace LKS_Mart
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // lblTransaction
+            // lblTransactionHistory
             // 
-            this.lblTransaction.AutoSize = true;
-            this.lblTransaction.Location = new System.Drawing.Point(29, 79);
-            this.lblTransaction.Name = "lblTransaction";
-            this.lblTransaction.Size = new System.Drawing.Size(67, 15);
-            this.lblTransaction.TabIndex = 12;
-            this.lblTransaction.Text = "Transaction";
-            // 
-            // dgvTransaction
-            // 
-            this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaction.Location = new System.Drawing.Point(32, 97);
-            this.dgvTransaction.Name = "dgvTransaction";
-            this.dgvTransaction.Size = new System.Drawing.Size(633, 180);
-            this.dgvTransaction.TabIndex = 13;
-            // 
-            // lblProductsBought
-            // 
-            this.lblProductsBought.AutoSize = true;
-            this.lblProductsBought.Location = new System.Drawing.Point(29, 296);
-            this.lblProductsBought.Name = "lblProductsBought";
-            this.lblProductsBought.Size = new System.Drawing.Size(238, 15);
-            this.lblProductsBought.TabIndex = 14;
-            this.lblProductsBought.Text = "Products bought for the selected transaction";
-            // 
-            // panelTransactionDetail
-            // 
-            this.panelTransactionDetail.Location = new System.Drawing.Point(32, 314);
-            this.panelTransactionDetail.Name = "panelTransactionDetail";
-            this.panelTransactionDetail.Size = new System.Drawing.Size(633, 180);
-            this.panelTransactionDetail.TabIndex = 15;
+            this.lblTransactionHistory.AutoSize = true;
+            this.lblTransactionHistory.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransactionHistory.ForeColor = System.Drawing.Color.Black;
+            this.lblTransactionHistory.Location = new System.Drawing.Point(26, 24);
+            this.lblTransactionHistory.Name = "lblTransactionHistory";
+            this.lblTransactionHistory.Size = new System.Drawing.Size(259, 33);
+            this.lblTransactionHistory.TabIndex = 9;
+            this.lblTransactionHistory.Text = "Transaction History";
             // 
             // TransactionHistoryForm
             // 

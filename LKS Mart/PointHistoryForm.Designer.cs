@@ -30,11 +30,11 @@ namespace LKS_Mart
         private void InitializeComponent()
         {
             this.panelContent = new System.Windows.Forms.Panel();
+            this.dgvPoint = new System.Windows.Forms.DataGridView();
+            this.lblCurrentPointValue = new System.Windows.Forms.Label();
+            this.lblCurrentPoint = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblPointHistory = new System.Windows.Forms.Label();
-            this.dgvPoint = new System.Windows.Forms.DataGridView();
-            this.lblCurrentPoint = new System.Windows.Forms.Label();
-            this.lblCurrentPointValue = new System.Windows.Forms.Label();
             this.panelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPoint)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,32 @@ namespace LKS_Mart
             this.panelContent.Size = new System.Drawing.Size(700, 360);
             this.panelContent.TabIndex = 3;
             // 
+            // dgvPoint
+            // 
+            this.dgvPoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPoint.Location = new System.Drawing.Point(35, 98);
+            this.dgvPoint.Name = "dgvPoint";
+            this.dgvPoint.Size = new System.Drawing.Size(633, 228);
+            this.dgvPoint.TabIndex = 15;
+            // 
+            // lblCurrentPointValue
+            // 
+            this.lblCurrentPointValue.AutoSize = true;
+            this.lblCurrentPointValue.Location = new System.Drawing.Point(126, 80);
+            this.lblCurrentPointValue.Name = "lblCurrentPointValue";
+            this.lblCurrentPointValue.Size = new System.Drawing.Size(65, 15);
+            this.lblCurrentPointValue.TabIndex = 14;
+            this.lblCurrentPointValue.Text = "<< Point >>";
+            // 
+            // lblCurrentPoint
+            // 
+            this.lblCurrentPoint.AutoSize = true;
+            this.lblCurrentPoint.Location = new System.Drawing.Point(31, 80);
+            this.lblCurrentPoint.Name = "lblCurrentPoint";
+            this.lblCurrentPoint.Size = new System.Drawing.Size(77, 15);
+            this.lblCurrentPoint.TabIndex = 14;
+            this.lblCurrentPoint.Text = "Current Point";
+            // 
             // btnBack
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -71,6 +97,7 @@ namespace LKS_Mart
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblPointHistory
             // 
@@ -82,32 +109,6 @@ namespace LKS_Mart
             this.lblPointHistory.Size = new System.Drawing.Size(177, 33);
             this.lblPointHistory.TabIndex = 11;
             this.lblPointHistory.Text = "Point History";
-            // 
-            // dgvPoint
-            // 
-            this.dgvPoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPoint.Location = new System.Drawing.Point(35, 98);
-            this.dgvPoint.Name = "dgvPoint";
-            this.dgvPoint.Size = new System.Drawing.Size(633, 228);
-            this.dgvPoint.TabIndex = 15;
-            // 
-            // lblCurrentPoint
-            // 
-            this.lblCurrentPoint.AutoSize = true;
-            this.lblCurrentPoint.Location = new System.Drawing.Point(31, 80);
-            this.lblCurrentPoint.Name = "lblCurrentPoint";
-            this.lblCurrentPoint.Size = new System.Drawing.Size(77, 15);
-            this.lblCurrentPoint.TabIndex = 14;
-            this.lblCurrentPoint.Text = "Current Point";
-            // 
-            // lblCurrentPointValue
-            // 
-            this.lblCurrentPointValue.AutoSize = true;
-            this.lblCurrentPointValue.Location = new System.Drawing.Point(126, 80);
-            this.lblCurrentPointValue.Name = "lblCurrentPointValue";
-            this.lblCurrentPointValue.Size = new System.Drawing.Size(65, 15);
-            this.lblCurrentPointValue.TabIndex = 14;
-            this.lblCurrentPointValue.Text = "<< Point >>";
             // 
             // PointHistoryForm
             // 

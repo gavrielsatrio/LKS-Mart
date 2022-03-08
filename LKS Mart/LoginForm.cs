@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.Json;
+using System.IO;
 
 namespace LKS_Mart
 {
@@ -23,6 +25,11 @@ namespace LKS_Mart
         {
             lblTitle.Text = this.Text;
             btnClose.Click += btnClose_Click;
+
+            if(!File.Exists(Application.StartupPath + "/LKSMart.lksmartappdata"))
+            {
+                File.WriteAllText(Application.StartupPath + "/LKSMart.appdata", "");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

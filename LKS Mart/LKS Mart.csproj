@@ -45,6 +45,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -131,6 +132,12 @@
     <Compile Include="PointHistory.cs">
       <DependentUpon>LKSMartModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PointHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointHistoryForm.Designer.cs">
+      <DependentUpon>PointHistoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>LKSMartModel.tt</DependentUpon>
     </Compile>
@@ -160,11 +167,11 @@
     <Compile Include="TransactionHistoryForm.Designer.cs">
       <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransactionHistoryItemLayout.cs">
+    <Compile Include="TransactionHistoryItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TransactionHistoryItemLayout.Designer.cs">
-      <DependentUpon>TransactionHistoryItemLayout.cs</DependentUpon>
+    <Compile Include="TransactionHistoryItem.Designer.cs">
+      <DependentUpon>TransactionHistoryItem.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddToCartForm.resx">
       <DependentUpon>AddToCartForm.cs</DependentUpon>
@@ -187,6 +194,9 @@
     <EmbeddedResource Include="NotificationForm.resx">
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PointHistoryForm.resx">
+      <DependentUpon>PointHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,8 +218,8 @@
     <EmbeddedResource Include="TransactionHistoryForm.resx">
       <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransactionHistoryItemLayout.resx">
-      <DependentUpon>TransactionHistoryItemLayout.cs</DependentUpon>
+    <EmbeddedResource Include="TransactionHistoryItem.resx">
+      <DependentUpon>TransactionHistoryItem.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="LKSMartModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

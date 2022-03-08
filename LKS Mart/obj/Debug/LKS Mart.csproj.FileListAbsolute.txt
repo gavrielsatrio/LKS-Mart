@@ -15,3 +15,21 @@ D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.exe
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.pdb
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.csproj.AssemblyReference.cache
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.MainForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.AddToCartForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.CartForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.CartItem.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.NotificationForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.PointHistoryForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.ProfileForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.ShopForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.ShopItemLayout.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.TransactionHistoryForm.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS_Mart.TransactionHistoryItem.resources
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Text.Json.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Memory.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Text.Encodings.Web.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Numerics.Vectors.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Buffers.dll
+D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.exe.config

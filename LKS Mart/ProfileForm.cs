@@ -25,7 +25,14 @@ namespace LKS_Mart
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            new MainForm().Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new MainForm().Show();
         }
     }
 }
