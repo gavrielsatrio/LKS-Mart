@@ -180,6 +180,7 @@ namespace LKS_Mart
             this.btnEditGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditGender.TabIndex = 10;
             this.btnEditGender.TabStop = false;
+            this.btnEditGender.Click += new System.EventHandler(this.btnEditGender_Click);
             // 
             // btnEditAddress
             // 
@@ -190,6 +191,7 @@ namespace LKS_Mart
             this.btnEditAddress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditAddress.TabIndex = 10;
             this.btnEditAddress.TabStop = false;
+            this.btnEditAddress.Click += new System.EventHandler(this.btnEditAddress_Click);
             // 
             // btnEditDateOfBirth
             // 
@@ -200,6 +202,7 @@ namespace LKS_Mart
             this.btnEditDateOfBirth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditDateOfBirth.TabIndex = 10;
             this.btnEditDateOfBirth.TabStop = false;
+            this.btnEditDateOfBirth.Click += new System.EventHandler(this.btnEditDateOfBirth_Click);
             // 
             // btnEditPIN
             // 
@@ -210,6 +213,7 @@ namespace LKS_Mart
             this.btnEditPIN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditPIN.TabIndex = 10;
             this.btnEditPIN.TabStop = false;
+            this.btnEditPIN.Click += new System.EventHandler(this.btnEditPIN_Click);
             // 
             // btnEditName
             // 
@@ -220,6 +224,7 @@ namespace LKS_Mart
             this.btnEditName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditName.TabIndex = 10;
             this.btnEditName.TabStop = false;
+            this.btnEditName.Click += new System.EventHandler(this.btnEditName_Click);
             // 
             // txtAddress
             // 

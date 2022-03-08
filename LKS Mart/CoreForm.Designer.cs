@@ -92,6 +92,8 @@ namespace LKS_Mart
             this.btnFullscreen.TabIndex = 2;
             this.btnFullscreen.TabStop = false;
             this.btnFullscreen.Click += new System.EventHandler(this.btnFullscreen_Click);
+            this.btnFullscreen.MouseEnter += new System.EventHandler(this.btnFullscreen_MouseEnter);
+            this.btnFullscreen.MouseLeave += new System.EventHandler(this.btnFullscreen_MouseLeave);
             // 
             // btnClose
             // 
@@ -102,6 +104,8 @@ namespace LKS_Mart
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // btnMinimize
             // 
@@ -113,6 +117,8 @@ namespace LKS_Mart
             this.btnMinimize.TabIndex = 1;
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.MouseEnter += new System.EventHandler(this.btnMinimize_MouseEnter);
+            this.btnMinimize.MouseLeave += new System.EventHandler(this.btnMinimize_MouseLeave);
             // 
             // lblTitle
             // 

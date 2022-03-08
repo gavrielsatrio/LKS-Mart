@@ -40,9 +40,9 @@ namespace LKS_Mart
             txtAddress.Text = customer.address;
             comboGender.SelectedItem = customer.gender == null ? "Prefer not to say" : customer.gender;
 
-            if(customer.profile_image_name == null)
+            if (customer.profile_image_name != "" || customer.profile_image_name != null)
             {
-                picBoxProfilePicture.ImageLocation = Application.StartupPath + "/images/profile_pictures/default_profile_picture.png";
+                picBoxProfilePicture.ImageLocation = Application.StartupPath + "/images/profile_pictures/" + customer.profile_image_name + ".png";
             }
         }
 
@@ -56,6 +56,43 @@ namespace LKS_Mart
         {
             this.Hide();
             new MainForm().Show();
+        }
+
+        private void btnEditName_Click(object sender, EventArgs e)
+        {
+            btnEditClick(txtName);
+        }
+
+        private void btnEditPIN_Click(object sender, EventArgs e)
+        {
+            btnEditClick(txtPIN);
+        }
+
+        private void btnEditDateOfBirth_Click(object sender, EventArgs e)
+        {
+            btnEditClick(dtpDateOfBirth);
+        }
+
+        private void btnEditAddress_Click(object sender, EventArgs e)
+        {
+            btnEditClick(txtAddress);
+        }
+
+        private void btnEditGender_Click(object sender, EventArgs e)
+        {
+            btnEditClick(comboGender);
+        }
+
+        private void btnEditClick(Control controlToEnable)
+        {
+            if (controlToEnable.Enabled == true)
+            {
+                controlToEnable.Enabled = false;
+            }
+            else
+            {
+                controlToEnable.Enabled = true;
+            }
         }
     }
 }

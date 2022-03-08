@@ -106,5 +106,15 @@ namespace LKS_Mart
                 MessageBox.Show("Please fill up your email / phone number ...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void lblPlaceholderPhoneEmail_Click(object sender, EventArgs e)
+        {
+            txtPhoneEmail.Focus();
+        }
+
+        private void lblPlaceholderPIN_Click(object sender, EventArgs e)
+        {
+            txtPIN.Focus();
+        }
     }
 }

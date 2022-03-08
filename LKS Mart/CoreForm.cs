@@ -21,6 +21,16 @@ namespace LKS_Mart
         private int currentX;
         private int currentY;
 
+        private Color redBackground = Color.FromArgb(255, 96, 92);
+        private Color redBorder = Color.FromArgb(233, 76, 70);
+        private Color redHoverContent = Color.FromArgb(92, 5, 5);
+        private Color yellowBackground = Color.FromArgb(255, 189, 68);
+        private Color yellowBorder = Color.FromArgb(232, 169, 37);
+        private Color yellowHoverContent = Color.FromArgb(153, 87, 0);
+        private Color greenBackground = Color.FromArgb(0, 202, 78);
+        private Color greenBorder = Color.FromArgb(36, 182, 54);
+        private Color greenHoverContent = Color.FromArgb(0, 100, 0);
+
         public CoreForm()
         {
             InitializeComponent();
@@ -28,9 +38,9 @@ namespace LKS_Mart
 
         private void CoreForm_Load(object sender, EventArgs e)
         {
-            DrawButton(btnClose, Color.FromArgb(254, 94, 83), Color.FromArgb(219, 120, 113));
-            DrawButton(btnMinimize, Color.FromArgb(255, 191, 8), Color.FromArgb(227, 173, 27));
-            DrawButton(btnFullscreen, Color.FromArgb(21, 204, 56), Color.FromArgb(39, 186, 67));
+            DrawButton(btnClose, redBackground, redBorder);
+            DrawButton(btnMinimize, yellowBackground, yellowBorder);
+            DrawButton(btnFullscreen, greenBackground, greenBorder);
 
             this.MaximizedBounds = Screen.GetWorkingArea(this);
         }
@@ -44,6 +54,38 @@ namespace LKS_Mart
             canvas.SmoothingMode = SmoothingMode.AntiAlias;
             canvas.FillEllipse(new SolidBrush(color), 0, 0, size, size);
             canvas.DrawEllipse(new Pen(colorBorder), 0, 0, size, size);
+
+            picBox.Image = btn;
+
+            canvas.Dispose();
+        }
+
+        private void DrawButtonHoverState(PictureBox picBox, Color color, Color colorBorder, Color colorHoverContent, string buttonType)
+        {
+            int size = 14;
+            Bitmap btn = new Bitmap(size + 4, size + 4);
+
+            Graphics canvas = Graphics.FromImage(btn);
+            canvas.SmoothingMode = SmoothingMode.AntiAlias;
+            canvas.FillEllipse(new SolidBrush(color), 0, 0, size, size);
+            canvas.DrawEllipse(new Pen(colorBorder), 0, 0, size, size);
+
+            if(buttonType == "Close")
+            {
+                canvas.DrawLine(new Pen(colorHoverContent), 4, 4, size - 4, size - 4);
+                canvas.DrawLine(new Pen(colorHoverContent), size - 4, 4, 4, size - 4);
+            }
+            else if(buttonType == "Minimize")
+            {
+                canvas.DrawLine(new Pen(colorHoverContent), 4, size / 2, size - 4, size / 2);
+            }
+            else
+            {
+                canvas.FillRectangle(new SolidBrush(colorHoverContent), 4, 4, size - 8, size - 8);
+                canvas.DrawLine(new Pen(color), 5, 4, size - 4, size - 5);
+                canvas.DrawLine(new Pen(color), 4, 4, size - 4, size - 4);
+                canvas.DrawLine(new Pen(color), 3, 4, size - 4, size - 3);
+            }
 
             picBox.Image = btn;
 
@@ -238,6 +280,36 @@ namespace LKS_Mart
                 windowStatus = "Maximize";
                 this.WindowState = FormWindowState.Maximized;
             }
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            DrawButton(btnClose, redBackground, redBorder);
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            DrawButtonHoverState(btnClose, redBackground, redBorder, redHoverContent, "Close");
+        }
+
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            DrawButtonHoverState(btnMinimize, yellowBackground, yellowBorder, yellowHoverContent, "Minimize");
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            DrawButton(btnMinimize, yellowBackground, yellowBorder);
+        }
+
+        private void btnFullscreen_MouseEnter(object sender, EventArgs e)
+        {
+            DrawButtonHoverState(btnFullscreen, greenBackground, greenBorder, greenHoverContent, "Maximize");
+        }
+
+        private void btnFullscreen_MouseLeave(object sender, EventArgs e)
+        {
+            DrawButton(btnFullscreen, greenBackground, greenBorder);
         }
     }
 }

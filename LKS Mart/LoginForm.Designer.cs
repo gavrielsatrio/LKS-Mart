@@ -85,6 +85,7 @@ namespace LKS_Mart
             this.lblPlaceholderPIN.Size = new System.Drawing.Size(70, 15);
             this.lblPlaceholderPIN.TabIndex = 4;
             this.lblPlaceholderPIN.Text = "PIN Number";
+            this.lblPlaceholderPIN.Click += new System.EventHandler(this.lblPlaceholderPIN_Click);
             // 
             // txtPIN
             // 
@@ -119,6 +120,7 @@ namespace LKS_Mart
             this.lblPlaceholderPhoneEmail.Size = new System.Drawing.Size(123, 15);
             this.lblPlaceholderPhoneEmail.TabIndex = 4;
             this.lblPlaceholderPhoneEmail.Text = "Email / phone number";
+            this.lblPlaceholderPhoneEmail.Click += new System.EventHandler(this.lblPlaceholderPhoneEmail_Click);
             // 
             // txtPhoneEmail
             // 
