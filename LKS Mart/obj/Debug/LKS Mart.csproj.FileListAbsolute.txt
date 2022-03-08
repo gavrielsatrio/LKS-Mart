@@ -33,3 +33,4 @@ D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Threading.Tasks.Ext
 D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Buffers.dll
 D:\Visual Studio Projects\LKS Mart\LKS Mart\obj\Debug\LKS Mart.exe.config
+D:\Visual Studio Projects\LKS Mart\LKS Mart\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll

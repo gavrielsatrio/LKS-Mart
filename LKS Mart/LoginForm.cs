@@ -15,6 +15,7 @@ namespace LKS_Mart
     public partial class LoginForm : CoreForm
     {
         private LKSMartEntities db = new LKSMartEntities();
+        private AppDataController appDataController = new AppDataController();
 
         public LoginForm()
         {
@@ -26,10 +27,7 @@ namespace LKS_Mart
             lblTitle.Text = this.Text;
             btnClose.Click += btnClose_Click;
 
-            if(!File.Exists(Application.StartupPath + "/LKSMart.lksmartappdata"))
-            {
-                File.WriteAllText(Application.StartupPath + "/LKSMart.appdata", "");
-            }
+            appDataController.CreateAppDataFile();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -81,10 +79,14 @@ namespace LKS_Mart
                     {
                         if(txtPIN.Text == getPIN[0].pin_number)
                         {
+                            var customerID = getPIN[0].id;
+
+                            appDataController.LoginCustomer(customerID);
+
                             this.Hide();
                             new MainForm()
                             { 
-                                customerID = getPIN[0].id
+                                customerID = customerID
                             }.Show();
                         }
                         else
