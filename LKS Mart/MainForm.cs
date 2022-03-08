@@ -31,7 +31,7 @@ namespace LKS_Mart
 
             var customerID = appDataController.GetAppData().LoginCustomerID;
             var customer = db.Customers.Where(x => x.id == customerID).ToArray()[0];
-            lblWelcome.Text = $"Welcome, { customer.name }!";
+            lblWelcome.Text = $"Welcome, { customer.name } !";
 
             if(customer.profile_image_name == "" || customer.profile_image_name == null)
             {
