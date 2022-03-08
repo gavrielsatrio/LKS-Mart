@@ -13,7 +13,7 @@ namespace LKS_Mart
 {
     public partial class MainForm : CoreForm
     {
-        public int customerID = -1;
+        private AppDataController appDataController = new AppDataController();
         private LKSMartEntities db = new LKSMartEntities();
 
         public MainForm()
@@ -29,6 +29,7 @@ namespace LKS_Mart
             lblDatetime.Text = DateTime.Now.ToString("dd MMMM yyyy, HH:mm:ss");
             timerDatetime.Start();
 
+            var customerID = appDataController.GetAppData().LoginCustomerID;
             var customer = db.Customers.Where(x => x.id == customerID).ToArray()[0];
             lblWelcome.Text = $"Welcome, { customer.name }!";
 

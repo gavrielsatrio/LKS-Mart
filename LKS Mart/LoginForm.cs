@@ -84,10 +84,7 @@ namespace LKS_Mart
                             appDataController.LoginCustomer(customerID);
 
                             this.Hide();
-                            new MainForm()
-                            { 
-                                customerID = customerID
-                            }.Show();
+                            new MainForm().Show();
                         }
                         else
                         {

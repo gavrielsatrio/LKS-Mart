@@ -32,7 +32,7 @@ namespace LKS_Mart
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.panelContent = new System.Windows.Forms.Panel();
             this.comboGender = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.picBoxProfilePicture = new System.Windows.Forms.PictureBox();
             this.lblErrorDateOfBirth = new System.Windows.Forms.Label();
             this.lblErrorPIN = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@ namespace LKS_Mart
             // 
             this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContent.Controls.Add(this.comboGender);
-            this.panelContent.Controls.Add(this.dateTimePicker1);
+            this.panelContent.Controls.Add(this.dtpDateOfBirth);
             this.panelContent.Controls.Add(this.picBoxProfilePicture);
             this.panelContent.Controls.Add(this.lblErrorDateOfBirth);
             this.panelContent.Controls.Add(this.lblErrorPIN);
@@ -101,26 +101,33 @@ namespace LKS_Mart
             this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(800, 480);
-            this.panelContent.TabIndex = 5;
+            this.panelContent.TabIndex = 0;
             // 
             // comboGender
             // 
             this.comboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboGender.Enabled = false;
             this.comboGender.FormattingEnabled = true;
+            this.comboGender.Items.AddRange(new object[] {
+            "Prefer not to say",
+            "Male",
+            "Female"});
             this.comboGender.Location = new System.Drawing.Point(120, 302);
             this.comboGender.Name = "comboGender";
             this.comboGender.Size = new System.Drawing.Size(300, 23);
-            this.comboGender.TabIndex = 14;
+            this.comboGender.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // dtpDateOfBirth
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 193);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(300, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dtpDateOfBirth.Enabled = false;
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(120, 193);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(300, 22);
+            this.dtpDateOfBirth.TabIndex = 4;
             // 
             // picBoxProfilePicture
             // 
+            this.picBoxProfilePicture.Image = ((System.Drawing.Image)(resources.GetObject("picBoxProfilePicture.Image")));
             this.picBoxProfilePicture.Location = new System.Drawing.Point(120, 334);
             this.picBoxProfilePicture.Name = "picBoxProfilePicture";
             this.picBoxProfilePicture.Size = new System.Drawing.Size(100, 100);
@@ -138,6 +145,7 @@ namespace LKS_Mart
             this.lblErrorDateOfBirth.Size = new System.Drawing.Size(31, 15);
             this.lblErrorDateOfBirth.TabIndex = 11;
             this.lblErrorDateOfBirth.Text = "Error";
+            this.lblErrorDateOfBirth.Visible = false;
             // 
             // lblErrorPIN
             // 
@@ -149,6 +157,7 @@ namespace LKS_Mart
             this.lblErrorPIN.Size = new System.Drawing.Size(31, 15);
             this.lblErrorPIN.TabIndex = 11;
             this.lblErrorPIN.Text = "Error";
+            this.lblErrorPIN.Visible = false;
             // 
             // lblErrorName
             // 
@@ -160,6 +169,7 @@ namespace LKS_Mart
             this.lblErrorName.Size = new System.Drawing.Size(31, 15);
             this.lblErrorName.TabIndex = 11;
             this.lblErrorName.Text = "Error";
+            this.lblErrorName.Visible = false;
             // 
             // btnEditGender
             // 
@@ -213,11 +223,12 @@ namespace LKS_Mart
             // 
             // txtAddress
             // 
+            this.txtAddress.Enabled = false;
             this.txtAddress.Location = new System.Drawing.Point(120, 221);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(300, 75);
-            this.txtAddress.TabIndex = 9;
+            this.txtAddress.TabIndex = 5;
             // 
             // lblProfilePicture
             // 
@@ -248,10 +259,12 @@ namespace LKS_Mart
             // 
             // txtPIN
             // 
+            this.txtPIN.Enabled = false;
             this.txtPIN.Location = new System.Drawing.Point(120, 165);
             this.txtPIN.Name = "txtPIN";
             this.txtPIN.Size = new System.Drawing.Size(300, 22);
-            this.txtPIN.TabIndex = 9;
+            this.txtPIN.TabIndex = 3;
+            this.txtPIN.UseSystemPasswordChar = true;
             // 
             // lblDateOfBirth
             // 
@@ -264,10 +277,11 @@ namespace LKS_Mart
             // 
             // txtEmail
             // 
+            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(120, 137);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 22);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 2;
             // 
             // lblPIN
             // 
@@ -280,10 +294,11 @@ namespace LKS_Mart
             // 
             // txtPhoneNumber
             // 
+            this.txtPhoneNumber.Enabled = false;
             this.txtPhoneNumber.Location = new System.Drawing.Point(120, 109);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(300, 22);
-            this.txtPhoneNumber.TabIndex = 9;
+            this.txtPhoneNumber.TabIndex = 1;
             // 
             // lblEmail
             // 
@@ -296,10 +311,11 @@ namespace LKS_Mart
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(120, 81);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(300, 22);
-            this.txtName.TabIndex = 9;
+            this.txtName.TabIndex = 0;
             // 
             // lblPhoneNumber
             // 
@@ -321,7 +337,7 @@ namespace LKS_Mart
             this.btnUpload.Location = new System.Drawing.Point(232, 404);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(90, 30);
-            this.btnUpload.TabIndex = 8;
+            this.btnUpload.TabIndex = 7;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
             // 
@@ -411,7 +427,7 @@ namespace LKS_Mart
         private System.Windows.Forms.Label lblProfilePicture;
         private System.Windows.Forms.PictureBox picBoxProfilePicture;
         private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
         private System.Windows.Forms.ComboBox comboGender;
     }
 }
