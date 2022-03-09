@@ -73,7 +73,7 @@ namespace LKS_Mart
             {
                 if(txtPIN.Text != "")
                 {
-                    var getPIN = db.Customers.Where(x => x.email == txtPhoneEmail.Text || x.phone_number == txtPhoneEmail.Text).ToArray();
+                    var getPIN = db.Customers.Where(x => (x.email == txtPhoneEmail.Text || x.phone_number == txtPhoneEmail.Text) && x.deleted_at == null).ToArray();
 
                     if(getPIN.Length > 0)
                     {

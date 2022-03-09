@@ -29,15 +29,29 @@ namespace LKS_Mart
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelBorder = new System.Windows.Forms.Panel();
             this.tableLayoutShopItem = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxImage = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.panelBorder.SuspendLayout();
             this.tableLayoutShopItem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panelBorder
+            // 
+            this.panelBorder.BackColor = System.Drawing.Color.White;
+            this.panelBorder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBorder.Controls.Add(this.tableLayoutShopItem);
+            this.panelBorder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBorder.Location = new System.Drawing.Point(0, 0);
+            this.panelBorder.Name = "panelBorder";
+            this.panelBorder.Padding = new System.Windows.Forms.Padding(16);
+            this.panelBorder.Size = new System.Drawing.Size(502, 107);
+            this.panelBorder.TabIndex = 1;
             // 
             // tableLayoutShopItem
             // 
@@ -50,7 +64,7 @@ namespace LKS_Mart
             this.tableLayoutShopItem.Controls.Add(this.btnAddToCart, 4, 0);
             this.tableLayoutShopItem.Controls.Add(this.lblStock, 3, 0);
             this.tableLayoutShopItem.Controls.Add(this.lblPrice, 2, 0);
-            this.tableLayoutShopItem.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutShopItem.Controls.Add(this.picBoxImage, 0, 0);
             this.tableLayoutShopItem.Controls.Add(this.lblName, 1, 0);
             this.tableLayoutShopItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutShopItem.Location = new System.Drawing.Point(16, 16);
@@ -58,7 +72,7 @@ namespace LKS_Mart
             this.tableLayoutShopItem.RowCount = 1;
             this.tableLayoutShopItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutShopItem.Size = new System.Drawing.Size(468, 73);
-            this.tableLayoutShopItem.TabIndex = 0;
+            this.tableLayoutShopItem.TabIndex = 1;
             // 
             // btnAddToCart
             // 
@@ -73,6 +87,7 @@ namespace LKS_Mart
             this.btnAddToCart.TabIndex = 9;
             this.btnAddToCart.Text = "Add to Cart";
             this.btnAddToCart.UseVisualStyleBackColor = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // lblStock
             // 
@@ -96,15 +111,15 @@ namespace LKS_Mart
             this.lblPrice.Text = "<< Product Price >>";
             this.lblPrice.UseCompatibleTextRendering = true;
             // 
-            // pictureBox1
+            // picBoxImage
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBoxImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBoxImage.Location = new System.Drawing.Point(3, 3);
+            this.picBoxImage.Name = "picBoxImage";
+            this.picBoxImage.Size = new System.Drawing.Size(67, 67);
+            this.picBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxImage.TabIndex = 0;
+            this.picBoxImage.TabStop = false;
             // 
             // lblName
             // 
@@ -121,25 +136,26 @@ namespace LKS_Mart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.tableLayoutShopItem);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.panelBorder);
             this.Name = "ShopItemLayout";
-            this.Padding = new System.Windows.Forms.Padding(16);
-            this.Size = new System.Drawing.Size(500, 105);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 16);
+            this.Size = new System.Drawing.Size(502, 123);
+            this.Load += new System.EventHandler(this.ShopItemLayout_Load);
+            this.panelBorder.ResumeLayout(false);
             this.tableLayoutShopItem.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Panel panelBorder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutShopItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Button btnAddToCart;
+        private System.Windows.Forms.Label lblStock;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.PictureBox picBoxImage;
+        private System.Windows.Forms.Label lblName;
     }
 }

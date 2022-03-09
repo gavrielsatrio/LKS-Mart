@@ -32,17 +32,17 @@ namespace LKS_Mart
             this.panelContent = new System.Windows.Forms.Panel();
             this.panelResult = new System.Windows.Forms.Panel();
             this.panelCategory = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblErrorName = new System.Windows.Forms.Label();
+            this.txtToPrice = new System.Windows.Forms.NumericUpDown();
+            this.txtFromPrice = new System.Windows.Forms.NumericUpDown();
+            this.lblDash = new System.Windows.Forms.Label();
+            this.lblPriceRange = new System.Windows.Forms.Label();
+            this.lblSearchPlaceholder = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblShop = new System.Windows.Forms.Label();
             this.panelContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFromPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContent
@@ -50,90 +50,116 @@ namespace LKS_Mart
             this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContent.Controls.Add(this.panelResult);
             this.panelContent.Controls.Add(this.panelCategory);
-            this.panelContent.Controls.Add(this.numericUpDown2);
-            this.panelContent.Controls.Add(this.numericUpDown1);
-            this.panelContent.Controls.Add(this.label2);
-            this.panelContent.Controls.Add(this.label1);
-            this.panelContent.Controls.Add(this.lblErrorName);
+            this.panelContent.Controls.Add(this.txtToPrice);
+            this.panelContent.Controls.Add(this.txtFromPrice);
+            this.panelContent.Controls.Add(this.lblDash);
+            this.panelContent.Controls.Add(this.lblPriceRange);
+            this.panelContent.Controls.Add(this.lblSearchPlaceholder);
             this.panelContent.Controls.Add(this.txtSearch);
             this.panelContent.Controls.Add(this.btnBack);
-            this.panelContent.Controls.Add(this.lblWelcome);
+            this.panelContent.Controls.Add(this.lblShop);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(800, 500);
-            this.panelContent.TabIndex = 3;
+            this.panelContent.TabIndex = 0;
             // 
             // panelResult
             // 
+            this.panelResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelResult.AutoScroll = true;
+            this.panelResult.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.panelResult.Location = new System.Drawing.Point(31, 187);
             this.panelResult.Name = "panelResult";
+            this.panelResult.Padding = new System.Windows.Forms.Padding(8);
             this.panelResult.Size = new System.Drawing.Size(742, 280);
-            this.panelResult.TabIndex = 14;
+            this.panelResult.TabIndex = 4;
             // 
             // panelCategory
             // 
+            this.panelCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCategory.Location = new System.Drawing.Point(31, 146);
             this.panelCategory.Name = "panelCategory";
             this.panelCategory.Size = new System.Drawing.Size(742, 35);
-            this.panelCategory.TabIndex = 14;
+            this.panelCategory.TabIndex = 3;
             // 
-            // numericUpDown2
+            // txtToPrice
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(244, 113);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown2.TabIndex = 13;
+            this.txtToPrice.Location = new System.Drawing.Point(244, 113);
+            this.txtToPrice.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.txtToPrice.Name = "txtToPrice";
+            this.txtToPrice.Size = new System.Drawing.Size(120, 22);
+            this.txtToPrice.TabIndex = 2;
+            this.txtToPrice.ValueChanged += new System.EventHandler(this.txtToPrice_ValueChanged);
             // 
-            // numericUpDown1
+            // txtFromPrice
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(101, 113);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 13;
+            this.txtFromPrice.Location = new System.Drawing.Point(101, 113);
+            this.txtFromPrice.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.txtFromPrice.Name = "txtFromPrice";
+            this.txtFromPrice.Size = new System.Drawing.Size(120, 22);
+            this.txtFromPrice.TabIndex = 1;
+            this.txtFromPrice.ValueChanged += new System.EventHandler(this.txtFromPrice_ValueChanged);
             // 
-            // label2
+            // lblDash
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.label2.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(227, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 15);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "-";
+            this.lblDash.AutoSize = true;
+            this.lblDash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.lblDash.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDash.ForeColor = System.Drawing.Color.Black;
+            this.lblDash.Location = new System.Drawing.Point(227, 115);
+            this.lblDash.Name = "lblDash";
+            this.lblDash.Size = new System.Drawing.Size(11, 15);
+            this.lblDash.TabIndex = 12;
+            this.lblDash.Text = "-";
             // 
-            // label1
+            // lblPriceRange
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.label1.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(28, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Price Range";
+            this.lblPriceRange.AutoSize = true;
+            this.lblPriceRange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.lblPriceRange.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceRange.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceRange.Location = new System.Drawing.Point(28, 115);
+            this.lblPriceRange.Name = "lblPriceRange";
+            this.lblPriceRange.Size = new System.Drawing.Size(67, 15);
+            this.lblPriceRange.TabIndex = 12;
+            this.lblPriceRange.Text = "Price Range";
             // 
-            // lblErrorName
+            // lblSearchPlaceholder
             // 
-            this.lblErrorName.AutoSize = true;
-            this.lblErrorName.BackColor = System.Drawing.Color.White;
-            this.lblErrorName.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.lblErrorName.Location = new System.Drawing.Point(35, 82);
-            this.lblErrorName.Name = "lblErrorName";
-            this.lblErrorName.Size = new System.Drawing.Size(89, 15);
-            this.lblErrorName.TabIndex = 12;
-            this.lblErrorName.Text = "Search keyword";
+            this.lblSearchPlaceholder.AutoSize = true;
+            this.lblSearchPlaceholder.BackColor = System.Drawing.Color.White;
+            this.lblSearchPlaceholder.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchPlaceholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.lblSearchPlaceholder.Location = new System.Drawing.Point(35, 82);
+            this.lblSearchPlaceholder.Name = "lblSearchPlaceholder";
+            this.lblSearchPlaceholder.Size = new System.Drawing.Size(89, 15);
+            this.lblSearchPlaceholder.TabIndex = 12;
+            this.lblSearchPlaceholder.Text = "Search keyword";
+            this.lblSearchPlaceholder.Click += new System.EventHandler(this.lblSearchPlaceholder_Click);
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Location = new System.Drawing.Point(31, 79);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(742, 22);
-            this.txtSearch.TabIndex = 10;
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // btnBack
             // 
@@ -146,21 +172,21 @@ namespace LKS_Mart
             this.btnBack.Location = new System.Drawing.Point(673, 23);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 35);
-            this.btnBack.TabIndex = 9;
+            this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // lblWelcome
+            // lblShop
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
-            this.lblWelcome.Location = new System.Drawing.Point(25, 23);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(75, 33);
-            this.lblWelcome.TabIndex = 6;
-            this.lblWelcome.Text = "Shop";
+            this.lblShop.AutoSize = true;
+            this.lblShop.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShop.ForeColor = System.Drawing.Color.Black;
+            this.lblShop.Location = new System.Drawing.Point(25, 23);
+            this.lblShop.Name = "lblShop";
+            this.lblShop.Size = new System.Drawing.Size(75, 33);
+            this.lblShop.TabIndex = 6;
+            this.lblShop.Text = "Shop";
             // 
             // ShopForm
             // 
@@ -174,8 +200,8 @@ namespace LKS_Mart
             this.Controls.SetChildIndex(this.panelContent, 0);
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFromPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,14 +209,14 @@ namespace LKS_Mart
         #endregion
 
         private System.Windows.Forms.Panel panelContent;
-        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblShop;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lblErrorName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label lblSearchPlaceholder;
+        private System.Windows.Forms.Label lblPriceRange;
+        private System.Windows.Forms.NumericUpDown txtFromPrice;
+        private System.Windows.Forms.Label lblDash;
+        private System.Windows.Forms.NumericUpDown txtToPrice;
         private System.Windows.Forms.Panel panelCategory;
         private System.Windows.Forms.Panel panelResult;
     }
