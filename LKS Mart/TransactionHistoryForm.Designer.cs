@@ -29,14 +29,18 @@ namespace LKS_Mart
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContent = new System.Windows.Forms.Panel();
             this.panelTransactionDetail = new System.Windows.Forms.Panel();
             this.lblProductsBought = new System.Windows.Forms.Label();
-            this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.lblTransaction = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblTransactionHistory = new System.Windows.Forms.Label();
+            this.panelTransactionBorder = new System.Windows.Forms.Panel();
+            this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.panelContent.SuspendLayout();
+            this.panelTransactionBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,10 +53,10 @@ namespace LKS_Mart
             this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContent.Controls.Add(this.panelTransactionDetail);
             this.panelContent.Controls.Add(this.lblProductsBought);
-            this.panelContent.Controls.Add(this.dgvTransaction);
             this.panelContent.Controls.Add(this.lblTransaction);
             this.panelContent.Controls.Add(this.btnBack);
             this.panelContent.Controls.Add(this.lblTransactionHistory);
+            this.panelContent.Controls.Add(this.panelTransactionBorder);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
@@ -61,8 +65,14 @@ namespace LKS_Mart
             // 
             // panelTransactionDetail
             // 
+            this.panelTransactionDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTransactionDetail.AutoScroll = true;
+            this.panelTransactionDetail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTransactionDetail.Location = new System.Drawing.Point(32, 314);
             this.panelTransactionDetail.Name = "panelTransactionDetail";
+            this.panelTransactionDetail.Padding = new System.Windows.Forms.Padding(16);
             this.panelTransactionDetail.Size = new System.Drawing.Size(633, 180);
             this.panelTransactionDetail.TabIndex = 15;
             // 
@@ -74,14 +84,6 @@ namespace LKS_Mart
             this.lblProductsBought.Size = new System.Drawing.Size(238, 15);
             this.lblProductsBought.TabIndex = 14;
             this.lblProductsBought.Text = "Products bought for the selected transaction";
-            // 
-            // dgvTransaction
-            // 
-            this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaction.Location = new System.Drawing.Point(32, 97);
-            this.dgvTransaction.Name = "dgvTransaction";
-            this.dgvTransaction.Size = new System.Drawing.Size(633, 180);
-            this.dgvTransaction.TabIndex = 13;
             // 
             // lblTransaction
             // 
@@ -119,6 +121,51 @@ namespace LKS_Mart
             this.lblTransactionHistory.TabIndex = 9;
             this.lblTransactionHistory.Text = "Transaction History";
             // 
+            // panelTransactionBorder
+            // 
+            this.panelTransactionBorder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTransactionBorder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTransactionBorder.Controls.Add(this.dgvTransaction);
+            this.panelTransactionBorder.Location = new System.Drawing.Point(32, 97);
+            this.panelTransactionBorder.Name = "panelTransactionBorder";
+            this.panelTransactionBorder.Size = new System.Drawing.Size(633, 180);
+            this.panelTransactionBorder.TabIndex = 16;
+            // 
+            // dgvTransaction
+            // 
+            this.dgvTransaction.AllowUserToResizeColumns = false;
+            this.dgvTransaction.AllowUserToResizeRows = false;
+            this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTransaction.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransaction.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTransaction.EnableHeadersVisualStyles = false;
+            this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dgvTransaction.Location = new System.Drawing.Point(0, 0);
+            this.dgvTransaction.Name = "dgvTransaction";
+            this.dgvTransaction.RowHeadersVisible = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(8);
+            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvTransaction.RowTemplate.DividerHeight = 8;
+            this.dgvTransaction.Size = new System.Drawing.Size(631, 178);
+            this.dgvTransaction.TabIndex = 13;
+            this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellClick);
+            // 
             // TransactionHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
@@ -131,6 +178,7 @@ namespace LKS_Mart
             this.Controls.SetChildIndex(this.panelContent, 0);
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
+            this.panelTransactionBorder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
             this.ResumeLayout(false);
 
@@ -145,5 +193,6 @@ namespace LKS_Mart
         private System.Windows.Forms.DataGridView dgvTransaction;
         private System.Windows.Forms.Label lblProductsBought;
         private System.Windows.Forms.Panel panelTransactionDetail;
+        private System.Windows.Forms.Panel panelTransactionBorder;
     }
 }
