@@ -30,6 +30,7 @@ namespace LKS_Mart
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CartItem));
+            this.panelBorder = new System.Windows.Forms.Panel();
             this.tableLayoutCartItem = new System.Windows.Forms.TableLayoutPanel();
             this.lblQty = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -37,14 +38,28 @@ namespace LKS_Mart
             this.btnEdit = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.panelBorder.SuspendLayout();
             this.tableLayoutCartItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
             // 
+            // panelBorder
+            // 
+            this.panelBorder.BackColor = System.Drawing.Color.White;
+            this.panelBorder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBorder.Controls.Add(this.tableLayoutCartItem);
+            this.panelBorder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBorder.Location = new System.Drawing.Point(0, 0);
+            this.panelBorder.Name = "panelBorder";
+            this.panelBorder.Padding = new System.Windows.Forms.Padding(16);
+            this.panelBorder.Size = new System.Drawing.Size(602, 132);
+            this.panelBorder.TabIndex = 0;
+            // 
             // tableLayoutCartItem
             // 
+            this.tableLayoutCartItem.BackColor = System.Drawing.Color.White;
             this.tableLayoutCartItem.ColumnCount = 6;
             this.tableLayoutCartItem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutCartItem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -64,7 +79,7 @@ namespace LKS_Mart
             this.tableLayoutCartItem.RowCount = 1;
             this.tableLayoutCartItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutCartItem.Size = new System.Drawing.Size(568, 98);
-            this.tableLayoutCartItem.TabIndex = 0;
+            this.tableLayoutCartItem.TabIndex = 1;
             // 
             // lblQty
             // 
@@ -134,13 +149,13 @@ namespace LKS_Mart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.tableLayoutCartItem);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.panelBorder);
             this.Name = "CartItem";
-            this.Padding = new System.Windows.Forms.Padding(16);
-            this.Size = new System.Drawing.Size(600, 130);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 16);
+            this.Size = new System.Drawing.Size(602, 148);
             this.Load += new System.EventHandler(this.CartItem_Load);
+            this.panelBorder.ResumeLayout(false);
             this.tableLayoutCartItem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
@@ -151,12 +166,13 @@ namespace LKS_Mart
 
         #endregion
 
+        private System.Windows.Forms.Panel panelBorder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutCartItem;
+        private System.Windows.Forms.Label lblQty;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.PictureBox picBoxImage;
         private System.Windows.Forms.PictureBox btnEdit;
         private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblQty;
-        private System.Windows.Forms.Label lblPrice;
     }
 }

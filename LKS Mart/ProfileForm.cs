@@ -76,6 +76,7 @@ namespace LKS_Mart
                 {
                     var query = db.Customers.Find(customerID);
                     query.name = txtName.Text;
+                    query.last_updated_at = DateTime.Now;
 
                     db.SaveChanges();
                 }
@@ -104,6 +105,7 @@ namespace LKS_Mart
                     {
                         var query = db.Customers.Find(customerID);
                         query.pin_number = txtPIN.Text;
+                        query.last_updated_at = DateTime.Now;
 
                         db.SaveChanges();
                     }
@@ -139,6 +141,7 @@ namespace LKS_Mart
                 {
                     var query = db.Customers.Find(customerID);
                     query.date_of_birth = dtpDateOfBirth.Value;
+                    query.last_updated_at = DateTime.Now;
 
                     db.SaveChanges();
                 }
@@ -168,6 +171,7 @@ namespace LKS_Mart
                 {
                     query.address = null;
                 }
+                query.last_updated_at = DateTime.Now;
 
                 db.SaveChanges();
             }
@@ -188,6 +192,7 @@ namespace LKS_Mart
                 {
                     query.gender = null;
                 }
+                query.last_updated_at = DateTime.Now;
 
                 db.SaveChanges();
             }
@@ -221,6 +226,7 @@ namespace LKS_Mart
 
                 var query = db.Customers.Find(customerID);
                 query.profile_image_name = fileNameWithoutExtension;
+                query.last_updated_at = DateTime.Now;
 
                 db.SaveChanges();
 

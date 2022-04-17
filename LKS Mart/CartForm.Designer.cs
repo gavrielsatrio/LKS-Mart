@@ -90,7 +90,7 @@ namespace LKS_Mart
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSubmit.BackColor = System.Drawing.Color.Black;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -102,6 +102,7 @@ namespace LKS_Mart
             this.btnSubmit.TabIndex = 17;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblSubtract
             // 
@@ -137,6 +138,7 @@ namespace LKS_Mart
             this.checkPayUsingPoint.TabIndex = 13;
             this.checkPayUsingPoint.Text = "Pay using available point";
             this.checkPayUsingPoint.UseVisualStyleBackColor = true;
+            this.checkPayUsingPoint.CheckedChanged += new System.EventHandler(this.checkPayUsingPoint_CheckedChanged);
             // 
             // comboPaymentType
             // 
@@ -257,8 +259,13 @@ namespace LKS_Mart
             // 
             // panelCart
             // 
+            this.panelCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCart.AutoScroll = true;
+            this.panelCart.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.panelCart.Location = new System.Drawing.Point(32, 70);
             this.panelCart.Name = "panelCart";
+            this.panelCart.Padding = new System.Windows.Forms.Padding(8);
             this.panelCart.Size = new System.Drawing.Size(635, 200);
             this.panelCart.TabIndex = 10;
             // 

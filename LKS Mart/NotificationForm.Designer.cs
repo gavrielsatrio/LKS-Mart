@@ -30,17 +30,17 @@ namespace LKS_Mart
         private void InitializeComponent()
         {
             this.panelContent = new System.Windows.Forms.Panel();
-            this.lblNotification = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             this.panelNotif = new System.Windows.Forms.Panel();
-            this.panelNotifBottom = new System.Windows.Forms.Panel();
-            this.lblPaymentCode = new System.Windows.Forms.Label();
             this.panelNotifTop = new System.Windows.Forms.Panel();
             this.lblNotifTop = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.panelNotifBottom = new System.Windows.Forms.Panel();
+            this.lblPaymentCode = new System.Windows.Forms.Label();
+            this.lblNotification = new System.Windows.Forms.Label();
             this.panelContent.SuspendLayout();
             this.panelNotif.SuspendLayout();
-            this.panelNotifBottom.SuspendLayout();
             this.panelNotifTop.SuspendLayout();
+            this.panelNotifBottom.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -59,16 +59,21 @@ namespace LKS_Mart
             this.panelContent.Size = new System.Drawing.Size(450, 380);
             this.panelContent.TabIndex = 8;
             // 
-            // lblNotification
+            // btnOK
             // 
-            this.lblNotification.AutoSize = true;
-            this.lblNotification.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotification.ForeColor = System.Drawing.Color.Black;
-            this.lblNotification.Location = new System.Drawing.Point(26, 24);
-            this.lblNotification.Name = "lblNotification";
-            this.lblNotification.Size = new System.Drawing.Size(165, 33);
-            this.lblNotification.TabIndex = 8;
-            this.lblNotification.Text = "Notification";
+            this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOK.BackColor = System.Drawing.Color.Black;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(179, 319);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(90, 30);
+            this.btnOK.TabIndex = 20;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // panelNotif
             // 
@@ -81,26 +86,6 @@ namespace LKS_Mart
             this.panelNotif.Name = "panelNotif";
             this.panelNotif.Size = new System.Drawing.Size(386, 220);
             this.panelNotif.TabIndex = 9;
-            // 
-            // panelNotifBottom
-            // 
-            this.panelNotifBottom.Controls.Add(this.lblPaymentCode);
-            this.panelNotifBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelNotifBottom.Location = new System.Drawing.Point(0, 148);
-            this.panelNotifBottom.Name = "panelNotifBottom";
-            this.panelNotifBottom.Size = new System.Drawing.Size(384, 70);
-            this.panelNotifBottom.TabIndex = 0;
-            // 
-            // lblPaymentCode
-            // 
-            this.lblPaymentCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPaymentCode.Font = new System.Drawing.Font("Open Sans SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentCode.Location = new System.Drawing.Point(0, 0);
-            this.lblPaymentCode.Name = "lblPaymentCode";
-            this.lblPaymentCode.Size = new System.Drawing.Size(384, 70);
-            this.lblPaymentCode.TabIndex = 12;
-            this.lblPaymentCode.Text = "<< Payment Code >>";
-            this.lblPaymentCode.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panelNotifTop
             // 
@@ -125,20 +110,36 @@ namespace LKS_Mart
     " process.";
             this.lblNotifTop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // btnOK
+            // panelNotifBottom
             // 
-            this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.BackColor = System.Drawing.Color.Black;
-            this.btnOK.FlatAppearance.BorderSize = 0;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(179, 319);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(90, 30);
-            this.btnOK.TabIndex = 20;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = false;
+            this.panelNotifBottom.Controls.Add(this.lblPaymentCode);
+            this.panelNotifBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelNotifBottom.Location = new System.Drawing.Point(0, 148);
+            this.panelNotifBottom.Name = "panelNotifBottom";
+            this.panelNotifBottom.Size = new System.Drawing.Size(384, 70);
+            this.panelNotifBottom.TabIndex = 0;
+            // 
+            // lblPaymentCode
+            // 
+            this.lblPaymentCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPaymentCode.Font = new System.Drawing.Font("Open Sans SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentCode.Location = new System.Drawing.Point(0, 0);
+            this.lblPaymentCode.Name = "lblPaymentCode";
+            this.lblPaymentCode.Size = new System.Drawing.Size(384, 70);
+            this.lblPaymentCode.TabIndex = 12;
+            this.lblPaymentCode.Text = "<< Payment Code >>";
+            this.lblPaymentCode.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblNotification
+            // 
+            this.lblNotification.AutoSize = true;
+            this.lblNotification.Font = new System.Drawing.Font("Open Sans ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotification.ForeColor = System.Drawing.Color.Black;
+            this.lblNotification.Location = new System.Drawing.Point(26, 24);
+            this.lblNotification.Name = "lblNotification";
+            this.lblNotification.Size = new System.Drawing.Size(165, 33);
+            this.lblNotification.TabIndex = 8;
+            this.lblNotification.Text = "Notification";
             // 
             // NotificationForm
             // 
@@ -153,8 +154,8 @@ namespace LKS_Mart
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
             this.panelNotif.ResumeLayout(false);
-            this.panelNotifBottom.ResumeLayout(false);
             this.panelNotifTop.ResumeLayout(false);
+            this.panelNotifBottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

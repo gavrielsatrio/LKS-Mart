@@ -38,7 +38,10 @@ namespace LKS_Mart
                 query = query.Where(x => x.name.ToLower().Contains(txtSearch.Text.ToLower())).ToList();
             }
 
-            query = query.Where(x => x.price >= txtFromPrice.Value && x.price <= txtToPrice.Value).ToList();
+            if(txtFromPrice.Value != 0 && txtToPrice.Value != 0)
+            {
+                query = query.Where(x => x.price >= txtFromPrice.Value && x.price <= txtToPrice.Value).ToList();
+            }
 
             for (int i = 0; i < query.Count; i++)
             {

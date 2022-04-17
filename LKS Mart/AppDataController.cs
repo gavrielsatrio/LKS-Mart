@@ -77,5 +77,13 @@ namespace LKS_Mart
 
             SaveAppData(updatedAppData);
         }
+
+        public void ClearCart()
+        {
+            var updatedAppData = GetAppData();
+            updatedAppData.CustomerCart = new List<CustomerCartItem>();
+
+            SaveAppData(updatedAppData);
+        }
     }
 }
