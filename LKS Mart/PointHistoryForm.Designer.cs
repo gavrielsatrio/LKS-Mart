@@ -29,13 +29,16 @@ namespace LKS_Mart
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.dgvPoint = new System.Windows.Forms.DataGridView();
             this.lblCurrentPointValue = new System.Windows.Forms.Label();
             this.lblCurrentPoint = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblPointHistory = new System.Windows.Forms.Label();
+            this.panelBorder = new System.Windows.Forms.Panel();
+            this.dgvPoint = new System.Windows.Forms.DataGridView();
             this.panelContent.SuspendLayout();
+            this.panelBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPoint)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,24 +49,16 @@ namespace LKS_Mart
             // panelContent
             // 
             this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelContent.Controls.Add(this.dgvPoint);
             this.panelContent.Controls.Add(this.lblCurrentPointValue);
             this.panelContent.Controls.Add(this.lblCurrentPoint);
             this.panelContent.Controls.Add(this.btnBack);
             this.panelContent.Controls.Add(this.lblPointHistory);
+            this.panelContent.Controls.Add(this.panelBorder);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(700, 360);
             this.panelContent.TabIndex = 3;
-            // 
-            // dgvPoint
-            // 
-            this.dgvPoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPoint.Location = new System.Drawing.Point(35, 98);
-            this.dgvPoint.Name = "dgvPoint";
-            this.dgvPoint.Size = new System.Drawing.Size(633, 228);
-            this.dgvPoint.TabIndex = 15;
             // 
             // lblCurrentPointValue
             // 
@@ -110,6 +105,43 @@ namespace LKS_Mart
             this.lblPointHistory.TabIndex = 11;
             this.lblPointHistory.Text = "Point History";
             // 
+            // panelBorder
+            // 
+            this.panelBorder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorder.Controls.Add(this.dgvPoint);
+            this.panelBorder.Location = new System.Drawing.Point(35, 98);
+            this.panelBorder.Name = "panelBorder";
+            this.panelBorder.Padding = new System.Windows.Forms.Padding(16);
+            this.panelBorder.Size = new System.Drawing.Size(633, 228);
+            this.panelBorder.TabIndex = 16;
+            // 
+            // dgvPoint
+            // 
+            this.dgvPoint.AllowUserToAddRows = false;
+            this.dgvPoint.AllowUserToDeleteRows = false;
+            this.dgvPoint.AllowUserToResizeColumns = false;
+            this.dgvPoint.AllowUserToResizeRows = false;
+            this.dgvPoint.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPoint.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvPoint.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dgvPoint.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPoint.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvPoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPoint.ColumnHeadersVisible = false;
+            this.dgvPoint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPoint.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dgvPoint.Location = new System.Drawing.Point(16, 16);
+            this.dgvPoint.Name = "dgvPoint";
+            this.dgvPoint.ReadOnly = true;
+            this.dgvPoint.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
+            this.dgvPoint.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPoint.RowTemplate.DividerHeight = 8;
+            this.dgvPoint.Size = new System.Drawing.Size(601, 196);
+            this.dgvPoint.TabIndex = 15;
+            // 
             // PointHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
@@ -122,6 +154,7 @@ namespace LKS_Mart
             this.Controls.SetChildIndex(this.panelContent, 0);
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
+            this.panelBorder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPoint)).EndInit();
             this.ResumeLayout(false);
 
@@ -135,5 +168,6 @@ namespace LKS_Mart
         private System.Windows.Forms.DataGridView dgvPoint;
         private System.Windows.Forms.Label lblCurrentPoint;
         private System.Windows.Forms.Label lblCurrentPointValue;
+        private System.Windows.Forms.Panel panelBorder;
     }
 }
