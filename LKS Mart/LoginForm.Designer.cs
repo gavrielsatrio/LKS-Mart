@@ -179,6 +179,7 @@ namespace LKS_Mart
             this.Controls.Add(this.panelContent);
             this.Name = "LoginForm";
             this.Text = "LKS Mart";
+            this.Activated += new System.EventHandler(this.LoginForm_Activated);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.Controls.SetChildIndex(this.panelContent, 0);
             this.panelContent.ResumeLayout(false);

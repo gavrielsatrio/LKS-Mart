@@ -21,12 +21,22 @@ namespace LKS_Mart
             return appDataJSONObject;
         }
 
+        public void SaveAppData(AppData appDataToSave)
+        {
+            File.WriteAllText(appDataFilePath, JsonSerializer.Serialize(appDataToSave));
+        }
+
         public void CreateAppDataFile()
         {
             if(!File.Exists(appDataFilePath))
             {
-                var jsonObject = new AppData();
-                File.WriteAllText(appDataFilePath, JsonSerializer.Serialize(jsonObject));
+                var jsonObject = new AppData()
+                {
+                    LoginCustomerID = -1,
+                    CustomerCart = new List<CustomerCartItem>()
+                };
+
+                SaveAppData(jsonObject);
             }
         }
 
@@ -35,7 +45,37 @@ namespace LKS_Mart
             var updatedAppData = GetAppData();
             updatedAppData.LoginCustomerID = customerID;
 
-            File.WriteAllText(appDataFilePath, JsonSerializer.Serialize(updatedAppData));
+            SaveAppData(updatedAppData);
+        }
+
+        public void AddProductToCart(int productID, int qty)
+        {
+            var updatedAppData = GetAppData();
+            updatedAppData.CustomerCart.Add(new CustomerCartItem
+            {
+                ProductID = productID,
+                Qty = qty
+            });
+
+            SaveAppData(updatedAppData);
+        }
+
+        public void LogoutCustomer()
+        {
+            var updatedAppData = GetAppData();
+            updatedAppData.LoginCustomerID = -1;
+            updatedAppData.CustomerCart = new List<CustomerCartItem>();
+
+            SaveAppData(updatedAppData);
+        }
+
+        public void DeleteProductFromCart(int productID)
+        {
+            var updatedAppData = GetAppData();
+            var queryDelete = updatedAppData.CustomerCart.Find(x => x.ProductID == productID);
+            updatedAppData.CustomerCart.Remove(queryDelete);
+
+            SaveAppData(updatedAppData);
         }
     }
 }

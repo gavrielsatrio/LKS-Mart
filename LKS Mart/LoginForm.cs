@@ -27,7 +27,14 @@ namespace LKS_Mart
             lblTitle.Text = this.Text;
             btnClose.Click += btnClose_Click;
 
+            //txtPhoneEmail.Text = "gavriel@gmail.com";
+            //txtPIN.Text = "admin";
             appDataController.CreateAppDataFile();
+
+            if(appDataController.GetAppData().LoginCustomerID != -1)
+            {
+                //LogUserIn(appDataController.GetAppData().LoginCustomerID);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -79,12 +86,7 @@ namespace LKS_Mart
                     {
                         if(txtPIN.Text == getPIN[0].pin_number)
                         {
-                            var customerID = getPIN[0].id;
-
-                            appDataController.LoginCustomer(customerID);
-
-                            this.Hide();
-                            new MainForm().Show();
+                            LogUserIn(getPIN[0].id);
                         }
                         else
                         {
@@ -115,6 +117,22 @@ namespace LKS_Mart
         private void lblPlaceholderPIN_Click(object sender, EventArgs e)
         {
             txtPIN.Focus();
+        }
+
+        private void LogUserIn(int customerID)
+        {
+            appDataController.LoginCustomer(customerID);
+
+            this.Hide();
+            new MainForm().Show();
+        }
+
+        private void LoginForm_Activated(object sender, EventArgs e)
+        {
+            if(appDataController.GetAppData().LoginCustomerID != -1)
+            {
+                LogUserIn(appDataController.GetAppData().LoginCustomerID);
+            }
         }
     }
 }

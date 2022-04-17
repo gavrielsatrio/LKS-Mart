@@ -4,103 +4,103 @@
     <EntitySetMapping Name="Categories">
       <EntityTypeMapping TypeName="LKSMartModel.Category">
         <MappingFragment StoreEntitySet="Category">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="LKSMartModel.Customer">
         <MappingFragment StoreEntitySet="Customer">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="pin_number" ColumnName="pin_number" />
-          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
-          <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="gender" ColumnName="gender" />
-          <ScalarProperty Name="point" ColumnName="point" />
-          <ScalarProperty Name="profile_image_name" ColumnName="profile_image_name" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="profile_image_name" ColumnName="profile_image_name" />
+          <ScalarProperty Name="point" ColumnName="point" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="pin_number" ColumnName="pin_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DetailTransactions">
       <EntityTypeMapping TypeName="LKSMartModel.DetailTransaction">
         <MappingFragment StoreEntitySet="DetailTransaction">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="header_transaction_id" ColumnName="header_transaction_id" />
-          <ScalarProperty Name="product_id" ColumnName="product_id" />
-          <ScalarProperty Name="price" ColumnName="price" />
-          <ScalarProperty Name="quantity" ColumnName="quantity" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="header_transaction_id" ColumnName="header_transaction_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HeaderTransactions">
       <EntityTypeMapping TypeName="LKSMartModel.HeaderTransaction">
         <MappingFragment StoreEntitySet="HeaderTransaction">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
-          <ScalarProperty Name="payment_type_id" ColumnName="payment_type_id" />
-          <ScalarProperty Name="datetime" ColumnName="datetime" />
-          <ScalarProperty Name="sub_total" ColumnName="sub_total" />
-          <ScalarProperty Name="point_used" ColumnName="point_used" />
-          <ScalarProperty Name="payment_code" ColumnName="payment_code" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="payment_code" ColumnName="payment_code" />
+          <ScalarProperty Name="point_used" ColumnName="point_used" />
+          <ScalarProperty Name="sub_total" ColumnName="sub_total" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="payment_type_id" ColumnName="payment_type_id" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PaymentTypes">
       <EntityTypeMapping TypeName="LKSMartModel.PaymentType">
         <MappingFragment StoreEntitySet="PaymentType">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PointHistories">
       <EntityTypeMapping TypeName="LKSMartModel.PointHistory">
         <MappingFragment StoreEntitySet="PointHistory">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
-          <ScalarProperty Name="header_transaction_id" ColumnName="header_transaction_id" />
-          <ScalarProperty Name="point_gained" ColumnName="point_gained" />
-          <ScalarProperty Name="point_deducted" ColumnName="point_deducted" />
-          <ScalarProperty Name="point_before" ColumnName="point_before" />
-          <ScalarProperty Name="point_after" ColumnName="point_after" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="point_after" ColumnName="point_after" />
+          <ScalarProperty Name="point_before" ColumnName="point_before" />
+          <ScalarProperty Name="point_deducted" ColumnName="point_deducted" />
+          <ScalarProperty Name="point_gained" ColumnName="point_gained" />
+          <ScalarProperty Name="header_transaction_id" ColumnName="header_transaction_id" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="LKSMartModel.Product">
         <MappingFragment StoreEntitySet="Product">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="category_id" ColumnName="category_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="price" ColumnName="price" />
-          <ScalarProperty Name="stock" ColumnName="stock" />
-          <ScalarProperty Name="image_name" ColumnName="image_name" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="last_updated_at" ColumnName="last_updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="image_name" ColumnName="image_name" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

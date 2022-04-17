@@ -30,20 +30,20 @@ namespace LKS_Mart
         private void InitializeComponent()
         {
             this.panelContent = new System.Windows.Forms.Panel();
+            this.tableQty = new System.Windows.Forms.TableLayoutPanel();
+            this.lblQty = new System.Windows.Forms.Label();
+            this.btnMinQty = new System.Windows.Forms.Button();
+            this.btnPlusQty = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.panelDesc = new System.Windows.Forms.Panel();
             this.lblDesc = new System.Windows.Forms.Label();
             this.picBoxImage = new System.Windows.Forms.PictureBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.tableQty = new System.Windows.Forms.TableLayoutPanel();
-            this.btnMinQty = new System.Windows.Forms.Button();
-            this.btnPlusQty = new System.Windows.Forms.Button();
-            this.lblQty = new System.Windows.Forms.Label();
             this.panelContent.SuspendLayout();
+            this.tableQty.SuspendLayout();
             this.panelDesc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
-            this.tableQty.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -64,6 +64,81 @@ namespace LKS_Mart
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(420, 410);
             this.panelContent.TabIndex = 13;
+            // 
+            // tableQty
+            // 
+            this.tableQty.ColumnCount = 3;
+            this.tableQty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableQty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableQty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableQty.Controls.Add(this.lblQty, 0, 0);
+            this.tableQty.Controls.Add(this.btnMinQty, 0, 0);
+            this.tableQty.Controls.Add(this.btnPlusQty, 2, 0);
+            this.tableQty.Location = new System.Drawing.Point(31, 269);
+            this.tableQty.Name = "tableQty";
+            this.tableQty.RowCount = 1;
+            this.tableQty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableQty.Size = new System.Drawing.Size(180, 37);
+            this.tableQty.TabIndex = 19;
+            // 
+            // lblQty
+            // 
+            this.lblQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblQty.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQty.ForeColor = System.Drawing.Color.Black;
+            this.lblQty.Location = new System.Drawing.Point(48, 0);
+            this.lblQty.Name = "lblQty";
+            this.lblQty.Size = new System.Drawing.Size(84, 37);
+            this.lblQty.TabIndex = 21;
+            this.lblQty.Text = "1";
+            this.lblQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnMinQty
+            // 
+            this.btnMinQty.BackColor = System.Drawing.Color.White;
+            this.btnMinQty.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinQty.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMinQty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinQty.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinQty.ForeColor = System.Drawing.Color.Black;
+            this.btnMinQty.Location = new System.Drawing.Point(12, 3);
+            this.btnMinQty.Name = "btnMinQty";
+            this.btnMinQty.Size = new System.Drawing.Size(30, 31);
+            this.btnMinQty.TabIndex = 19;
+            this.btnMinQty.Text = "-";
+            this.btnMinQty.UseVisualStyleBackColor = false;
+            this.btnMinQty.Click += new System.EventHandler(this.btnMinQty_Click);
+            // 
+            // btnPlusQty
+            // 
+            this.btnPlusQty.BackColor = System.Drawing.Color.White;
+            this.btnPlusQty.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPlusQty.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPlusQty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlusQty.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusQty.ForeColor = System.Drawing.Color.Black;
+            this.btnPlusQty.Location = new System.Drawing.Point(138, 3);
+            this.btnPlusQty.Name = "btnPlusQty";
+            this.btnPlusQty.Size = new System.Drawing.Size(30, 31);
+            this.btnPlusQty.TabIndex = 20;
+            this.btnPlusQty.Text = "+";
+            this.btnPlusQty.UseVisualStyleBackColor = false;
+            this.btnPlusQty.Click += new System.EventHandler(this.btnPlusQty_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.Black;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(161, 353);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(96, 35);
+            this.btnSubmit.TabIndex = 18;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // panelDesc
             // 
@@ -117,78 +192,6 @@ namespace LKS_Mart
             this.lblName.TabIndex = 15;
             this.lblName.Text = "<< Product Name >>";
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.Color.Black;
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(161, 353);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(96, 35);
-            this.btnSubmit.TabIndex = 18;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            // 
-            // tableQty
-            // 
-            this.tableQty.ColumnCount = 3;
-            this.tableQty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableQty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableQty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableQty.Controls.Add(this.lblQty, 0, 0);
-            this.tableQty.Controls.Add(this.btnMinQty, 0, 0);
-            this.tableQty.Controls.Add(this.btnPlusQty, 2, 0);
-            this.tableQty.Location = new System.Drawing.Point(31, 269);
-            this.tableQty.Name = "tableQty";
-            this.tableQty.RowCount = 1;
-            this.tableQty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableQty.Size = new System.Drawing.Size(180, 37);
-            this.tableQty.TabIndex = 19;
-            // 
-            // btnMinQty
-            // 
-            this.btnMinQty.BackColor = System.Drawing.Color.White;
-            this.btnMinQty.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinQty.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnMinQty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinQty.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinQty.ForeColor = System.Drawing.Color.Black;
-            this.btnMinQty.Location = new System.Drawing.Point(12, 3);
-            this.btnMinQty.Name = "btnMinQty";
-            this.btnMinQty.Size = new System.Drawing.Size(30, 31);
-            this.btnMinQty.TabIndex = 19;
-            this.btnMinQty.Text = "-";
-            this.btnMinQty.UseVisualStyleBackColor = false;
-            // 
-            // btnPlusQty
-            // 
-            this.btnPlusQty.BackColor = System.Drawing.Color.White;
-            this.btnPlusQty.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnPlusQty.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPlusQty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlusQty.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlusQty.ForeColor = System.Drawing.Color.Black;
-            this.btnPlusQty.Location = new System.Drawing.Point(138, 3);
-            this.btnPlusQty.Name = "btnPlusQty";
-            this.btnPlusQty.Size = new System.Drawing.Size(30, 31);
-            this.btnPlusQty.TabIndex = 20;
-            this.btnPlusQty.Text = "+";
-            this.btnPlusQty.UseVisualStyleBackColor = false;
-            // 
-            // lblQty
-            // 
-            this.lblQty.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblQty.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQty.ForeColor = System.Drawing.Color.Black;
-            this.lblQty.Location = new System.Drawing.Point(48, 0);
-            this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(84, 37);
-            this.lblQty.TabIndex = 21;
-            this.lblQty.Text = "12";
-            this.lblQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // AddToCartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
@@ -201,9 +204,9 @@ namespace LKS_Mart
             this.Controls.SetChildIndex(this.panelContent, 0);
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
+            this.tableQty.ResumeLayout(false);
             this.panelDesc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
-            this.tableQty.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -62,8 +62,10 @@ namespace LKS_Mart
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new LoginForm().Show();
+            Application.Exit();
+
+            //this.Hide();
+            //new LoginForm().Show();
         }
 
         private void timerDatetime_Tick(object sender, EventArgs e)
@@ -73,6 +75,8 @@ namespace LKS_Mart
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            appDataController.LogoutCustomer();
+
             this.Hide();
             new LoginForm().Show();
         }

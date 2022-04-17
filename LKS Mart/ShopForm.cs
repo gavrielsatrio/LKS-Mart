@@ -43,7 +43,7 @@ namespace LKS_Mart
             for (int i = 0; i < query.Count; i++)
             {
                 var product = query[i];
-                var shopItem = new ShopItemLayout(product)
+                var shopItem = new ShopItemLayout(product, this)
                 {
                     Dock = DockStyle.Top,
                     Margin = new Padding(0, 16, 0, 0)
@@ -110,6 +110,7 @@ namespace LKS_Mart
             else
             {
                 MessageBox.Show("Price range invalid ...", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtFromPrice.Value = txtToPrice.Value;
             }
         }
 
@@ -122,6 +123,7 @@ namespace LKS_Mart
             else
             {
                 MessageBox.Show("Price range invalid ...", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtToPrice.Value = txtFromPrice.Value;
             }
         }
     }

@@ -15,5 +15,6 @@ namespace LKS_Mart
     public class CustomerCartItem
     {
         public int ProductID { get; set; }
+        public int Qty { get; set; }
     }
 }

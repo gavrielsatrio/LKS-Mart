@@ -12,12 +12,15 @@ namespace LKS_Mart
 {
     public partial class ShopItemLayout : UserControl
     {
+        private ShopForm shopForm;
         private Product product;
+        private AppDataController appDataController = new AppDataController();
 
-        public ShopItemLayout(Product productParam)
+        public ShopItemLayout(Product productParam, ShopForm shopFormParam)
         {
             InitializeComponent();
             this.product = productParam;
+            this.shopForm = shopFormParam;
         }
 
         private void ShopItemLayout_Load(object sender, EventArgs e)
@@ -37,7 +40,17 @@ namespace LKS_Mart
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-
+            shopForm.Hide();
+            new AddToCartForm()
+            {
+                cartItem = new CustomerCartItem
+                {
+                    ProductID = product.id,
+                    //Qty = appData.CustomerCart.Where(x => x.ProductID == product.id).ToList().Count > 0 ? appData.CustomerCart.Where(x => x.ProductID == product.id).Select(x => x.Qty).ToArray()[0] : 1
+                    Qty = 1
+                },
+                backTo = "ShopForm"
+            }.Show();
         }
     }
 }
