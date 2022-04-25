@@ -179,14 +179,14 @@ namespace LKS_Mart
         #endregion
 
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.PictureBox btnMinimize;
-        private System.Windows.Forms.PictureBox btnFullscreen;
         protected System.Windows.Forms.Label lblTitle;
         protected System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Timer timerMinimize;
         private System.Windows.Forms.Timer timerNormal;
         private System.Windows.Forms.Timer timerMaximize;
+        protected System.Windows.Forms.PictureBox btnFullscreen;
+        protected System.Windows.Forms.PictureBox btnMinimize;
     }
 }
 

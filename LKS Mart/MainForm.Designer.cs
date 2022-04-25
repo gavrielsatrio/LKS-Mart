@@ -84,6 +84,7 @@ namespace LKS_Mart
             // 
             this.lblBtnPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnPoint.AutoSize = true;
+            this.lblBtnPoint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBtnPoint.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnPoint.ForeColor = System.Drawing.Color.Black;
             this.lblBtnPoint.Location = new System.Drawing.Point(111, 457);
@@ -98,6 +99,7 @@ namespace LKS_Mart
             // 
             this.lblBtnTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnTransaction.AutoSize = true;
+            this.lblBtnTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBtnTransaction.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnTransaction.ForeColor = System.Drawing.Color.Black;
             this.lblBtnTransaction.Location = new System.Drawing.Point(580, 263);
@@ -112,6 +114,7 @@ namespace LKS_Mart
             // 
             this.lblBtnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnShop.AutoSize = true;
+            this.lblBtnShop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBtnShop.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnShop.ForeColor = System.Drawing.Color.Black;
             this.lblBtnShop.Location = new System.Drawing.Point(368, 263);
@@ -125,6 +128,7 @@ namespace LKS_Mart
             // 
             this.lblBtnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBtnProfile.AutoSize = true;
+            this.lblBtnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBtnProfile.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBtnProfile.ForeColor = System.Drawing.Color.Black;
             this.lblBtnProfile.Location = new System.Drawing.Point(114, 263);
@@ -137,6 +141,7 @@ namespace LKS_Mart
             // picBoxBtnPoint
             // 
             this.picBoxBtnPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picBoxBtnPoint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxBtnPoint.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnPoint.Image")));
             this.picBoxBtnPoint.Location = new System.Drawing.Point(94, 345);
             this.picBoxBtnPoint.Name = "picBoxBtnPoint";
@@ -149,6 +154,7 @@ namespace LKS_Mart
             // picBoxBtnTransaction
             // 
             this.picBoxBtnTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picBoxBtnTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxBtnTransaction.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnTransaction.Image")));
             this.picBoxBtnTransaction.Location = new System.Drawing.Point(578, 153);
             this.picBoxBtnTransaction.Name = "picBoxBtnTransaction";
@@ -161,6 +167,7 @@ namespace LKS_Mart
             // picBoxBtnShop
             // 
             this.picBoxBtnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picBoxBtnShop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxBtnShop.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnShop.Image")));
             this.picBoxBtnShop.Location = new System.Drawing.Point(344, 153);
             this.picBoxBtnShop.Name = "picBoxBtnShop";
@@ -173,6 +180,7 @@ namespace LKS_Mart
             // picBoxBtnProfile
             // 
             this.picBoxBtnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picBoxBtnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxBtnProfile.Image = ((System.Drawing.Image)(resources.GetObject("picBoxBtnProfile.Image")));
             this.picBoxBtnProfile.Location = new System.Drawing.Point(94, 153);
             this.picBoxBtnProfile.Name = "picBoxBtnProfile";
@@ -223,6 +231,7 @@ namespace LKS_Mart
             // btnCart
             // 
             this.btnCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCart.Image")));
             this.btnCart.Location = new System.Drawing.Point(603, 24);
             this.btnCart.Name = "btnCart";
