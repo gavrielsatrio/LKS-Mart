@@ -25,12 +25,13 @@ namespace LKS_Mart
             lblTitle.Text = this.Text;
             btnClose.Click += btnClose_Click;
 
-            LoadData();
+            LoadData(0);
         }
 
-        private void LoadData()
+        private void LoadData(int categoryID)
         {
             panelResult.Controls.Clear();
+            panelCategory.Controls.Clear();
 
             var query = db.Products.Where(x => x.deleted_at == null).ToList();
             if(txtSearch.Text != "")
@@ -43,7 +44,12 @@ namespace LKS_Mart
                 query = query.Where(x => x.price >= txtFromPrice.Value && x.price <= txtToPrice.Value).ToList();
             }
 
-            for (int i = 0; i < query.Count; i++)
+            if(categoryID != 0)
+            {
+                query = query.Where(x => x.category_id == categoryID).ToList();
+            }
+
+            for (int i = query.Count - 1; i >= 0; i--)
             {
                 var product = query[i];
                 var shopItem = new ShopItemLayout(product, this)
@@ -52,9 +58,20 @@ namespace LKS_Mart
                     Margin = new Padding(0, 16, 0, 0)
                 };
 
-                shopItem.SendToBack();
+                shopItem.BringToFront();
                 panelResult.Controls.Add(shopItem);
             }
+
+            var linkAllCategory = new LinkLabel()
+            {
+                Name = "linkAllCategory-0",
+                Text = "All Category",
+                Location = new Point(0, 10),
+                AutoSize = true
+            };
+            linkAllCategory.Click += linkCategory_Click;
+
+            panelCategory.Controls.Add(linkAllCategory);
 
             if(query.Count == 0)
             {
@@ -67,6 +84,78 @@ namespace LKS_Mart
                     Font = new Font("Open Sans", 16F, FontStyle.Bold, GraphicsUnit.Point)
                 });
             }
+            else
+            {
+                var firstProduct = query[0];
+                var spacing = 8;
+
+                var lblNext = new Label()
+                {
+                    Name = "lblNext",
+                    Text = ">",
+                    AutoSize = true
+                };
+
+                lblNext.Location = new Point(linkAllCategory.Location.X + linkAllCategory.Width + spacing, 10);
+                panelCategory.Controls.Add(lblNext);
+
+                if (firstProduct.Category.parent_id == null || firstProduct.Category.parent_id == firstProduct.category_id)
+                {
+                    // End Category
+                    var linkEndCategory = new LinkLabel()
+                    {
+                        Name = "linkEndCategory-" + firstProduct.category_id,
+                        Text = firstProduct.Category.name,
+                        Location = new Point(lblNext.Location.X + lblNext.Width + spacing, 10),
+                        AutoSize = true
+                    };
+                    linkEndCategory.Click += linkCategory_Click;
+
+                    panelCategory.Controls.Add(linkEndCategory);
+                }
+                else
+                {
+                    // Parent Category > End Category
+                    var linkParentCategory = new LinkLabel()
+                    {
+                        Name = "linkParentCategory-" + firstProduct.Category.parent_id,
+                        Text = db.Categories.Where(x => x.id == firstProduct.Category.parent_id).Select(x => x.name).ToArray()[0],
+                        Location = new Point(lblNext.Location.X + lblNext.Width + spacing, 10),
+                        AutoSize = true
+                    };
+                    linkParentCategory.Click += linkCategory_Click;
+
+                    panelCategory.Controls.Add(linkParentCategory);
+
+                    var lblNext2 = new Label()
+                    {
+                        Name = "lblNext",
+                        Text = ">",
+                        AutoSize = true
+                    };
+                    lblNext2.Location = new Point(linkParentCategory.Location.X + linkParentCategory.Width + spacing, 10);
+                    panelCategory.Controls.Add(lblNext2);
+
+                    var linkEndCategory = new LinkLabel()
+                    {
+                        Name = "linkEndCategory-" + firstProduct.category_id,
+                        Text = firstProduct.Category.name,
+                        Location = new Point(lblNext2.Location.X + lblNext2.Width + spacing, 10),
+                        AutoSize = true
+                    };
+                    linkEndCategory.Click += linkCategory_Click;
+
+                    panelCategory.Controls.Add(linkEndCategory);
+                }
+            }
+        }
+
+        private void linkCategory_Click(object sender, EventArgs e)
+        {
+            var linkLabel = (LinkLabel)sender;
+            var categoryID = int.Parse(linkLabel.Name.Split('-')[1]);
+
+            LoadData(categoryID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -83,7 +172,7 @@ namespace LKS_Mart
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            LoadData();
+            LoadData(0);
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
@@ -108,7 +197,7 @@ namespace LKS_Mart
         {
             if(txtFromPrice.Value <= txtToPrice.Value)
             {
-                LoadData();
+                LoadData(0);
             }
             else
             {
@@ -121,7 +210,7 @@ namespace LKS_Mart
         {
             if(txtToPrice.Value >= txtFromPrice.Value)
             {
-                LoadData();
+                LoadData(0);
             }
             else
             {
